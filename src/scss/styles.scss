@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+$altoColumna: 100vh;
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -13,4 +16,446 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: antiquewhite;
+}
+//n_teachers
+#n_teachers {
+  width: 100vw;
+  height: $altoColumna;
+  position: relative;
+}
+#n_teachersValue {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarN_teachers {
+  margin: 0;
+  top: 55%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#n_teachers p {
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//n_teachers_vacc
+#n_teachers_vacc {
+  width: 100vw;
+  height: $altoColumna;
+}
+#n_teachers_vaccValue {
+  margin: 0;
+  top: calc(50% + (100vh * 1));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarN_teachers_vacc {
+  margin: 0;
+  top: calc(55% + (100vh * 1));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#n_teachers_vacc p {
+  margin: 0;
+  top: calc(30% + (100vh * 1));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//n_school_going
+#n_school_going {
+  width: 100vw;
+  height: 100vh;
+}
+#n_school_goingValue {
+  margin: 0;
+  top: calc(50% + (100vh * 2));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarN_school_going {
+  margin: 0;
+  top: calc(55% + (100vh * 2));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#n_school_going p {
+  margin: 0;
+  top: calc(30% + (100vh * 2));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//n_classrooms
+#n_classrooms {
+  width: 100vw;
+  height: 100vh;
+}
+#n_classroomsValue {
+  margin: 0;
+  top: calc(50% + (100vh * 3));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarN_classrooms {
+  margin: 0;
+  top: calc(55% + (100vh * 3));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#n_classrooms p {
+  margin: 0;
+  top: calc(30% + (100vh * 3));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//classroom_size
+#classroom_size {
+  width: 100vw;
+  height: 100vh;
+}
+#classroom_sizeValue {
+  margin: 0;
+  top: calc(50% + (100vh * 4));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarClassroom_size {
+  margin: 0;
+  top: calc(55% + (100vh * 4));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#classroom_size p {
+  margin: 0;
+  top: calc(30% + (100vh * 4));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//school_type
+#school_type {
+  width: 100vw;
+  height: 100vh;
+}
+#school_typeValue {
+  margin: 0;
+  top: calc(50% + (100vh * 5));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarSchool_type {
+  margin: 0;
+  top: calc(55% + (100vh * 5));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#school_type p {
+  margin: 0;
+  top: calc(30% + (100vh * 5));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//height_room
+#height_room {
+  width: 100vw;
+  height: 100vh;
+}
+#height_roomValue {
+  margin: 0;
+  top: calc(50% + (100vh * 6));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarHeight_room {
+  margin: 0;
+  top: calc(55% + (100vh * 6));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#height_room p {
+  margin: 0;
+  top: calc(30% + (100vh * 6));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//width_room
+#width_room {
+  width: 100vw;
+  height: 100vh;
+}
+#width_roomValue {
+  margin: 0;
+  top: calc(50% + (100vh * 7));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarWidth_room {
+  margin: 0;
+  top: calc(55% + (100vh * 7));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#width_room p {
+  margin: 0;
+  top: calc(30% + (100vh * 7));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//length_room
+#length_room {
+  width: 100vw;
+  height: 100vh;
+}
+#length_roomValue {
+  margin: 0;
+  top: calc(50% + (100vh * 8));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarLength_room {
+  margin: 0;
+  top: calc(55% + (100vh * 8));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#length_room p {
+  margin: 0;
+  top: calc(30% + (100vh * 8));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//masks_type
+#masks_type {
+  width: 100vw;
+  height: 100vh;
+}
+#masks_typeValue {
+  margin: 0;
+  top: calc(50% + (100vh * 9));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarMasks_type {
+  margin: 0;
+  top: calc(55% + (100vh * 9));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#masks_type p {
+  margin: 0;
+  top: calc(30% + (100vh * 9));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//ventilation_level
+#ventilation_level {
+  width: 100vw;
+  height: 100vh;
+}
+#ventilation_levelValue {
+  margin: 0;
+  top: calc(50% + (100vh * 10));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarVentilation_level {
+  margin: 0;
+  top: calc(55% + (100vh * 10));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#ventilation_level p {
+  margin: 0;
+  top: calc(30% + (100vh * 10));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+
+//class_duration
+#class_duration {
+  width: 100vw;
+  height: 100vh;
+}
+#class_durationValue {
+  margin: 0;
+  top: calc(50% + (100vh * 11));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#enviarClass_duration {
+  margin: 0;
+  top: calc(55% + (100vh * 11));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#class_duration p {
+  margin: 0;
+  top: calc(30% + (100vh * 11));
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  text-align: center;
+  position: absolute;
+}
+hr.rounded {
+  border-top: 5px solid antiquewhite;
+  border-bottom: 5px solid antiquewhite;
+  border-radius: 10px;
+  width: 90%;
+}
+#canvas1Div {
+  width: 30%;
+  background-color: blanchedalmond;
+  margin: 20px;
+  color: blueviolet;
+  height: 300px;
+  float: left;
+  text-align: center;
+}
+#canvas1 {
+  background-color: cornsilk;
+  width: 100%;
+  height: 100%;
+}
+#canvas2Div {
+  width: 30%;
+  background-color: blanchedalmond;
+  margin: 20px;
+  color: blueviolet;
+  height: 300px;
+  float: left;
+  text-align: center;
+}
+#canvas2 {
+  background-color: cornsilk;
+  width: 100%;
+  height: 100%;
+}
+#canvas3Div {
+  width: 30%;
+  background-color: blanchedalmond;
+  margin: 20px;
+  color: blueviolet;
+  height: 300px;
+  float: left;
+  text-align: center;
+}
+#canvas3 {
+  background-color: cornsilk;
+  width: 100%;
+  height: 100%;
 }

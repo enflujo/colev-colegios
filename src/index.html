@@ -6,5 +6,133 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Regreso a los colegios</title>
   </head>
-  <body></body>
+  <body>
+    <div id="entradas" class="hidden">
+      <div id="n_teachers">
+          <p>¿Cuántos profesores trabajan en tu colegio?</p>
+          <input type="text" id="n_teachersValue">
+          <input type="submit" id="enviarN_teachers" value="Enviar">
+      </div>
+      <hr class="rounded">
+      <div id="n_teachers_vacc">
+        <p>¿Cuántos profesores de tu colegio están vacunados?</p>
+        <input type="text" id="n_teachers_vaccValue">
+        <input type="submit" id="enviarN_teachers_vacc" value="Enviar">
+      </div>
+      <hr class="rounded">
+      <div id="n_school_going">
+        <p>¿Cuántos estudiantes asisten a tu colegio?</p>
+        <input type="text" id="n_school_goingValue">
+        <input type="submit" id="enviarN_school_going" value="Enviar">
+      </div>
+      <hr class="rounded">
+      <div id="n_classrooms">
+        <p>¿Cuántos salones tiene tu colegio?</p>
+        <input type="text" id="n_classroomsValue">
+        <input type="submit" id="enviarN_classrooms" value="Enviar">
+      </div>
+      <hr class="rounded">
+      <div id="classroom_size">
+        <p>¿Cuántos estudiantes están en el mismo salón?</p>
+        <input type="text" id="classroom_sizeValue">
+        <input type="submit" id="enviarClassroom_size" value="Enviar">
+      </div>
+      <hr class="rounded">
+      <div id="school_type">
+        <p>¿Es colegio privado?</p>
+        <select id="school_typeValue">
+          <option selected disabled>Escoge una opción...</option>
+          <option value="Público">Público</option>
+          <option value="Privado">Privado</option>
+          </select>  
+          <input type="submit" id="enviarSchool_type" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="height_room">
+          <p>¿Cuál es la altura de los salones?</p>
+          <input type="text" id="height_roomValue">
+          <input type="submit" id="enviarHeight_room" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="width_room">
+          <p>¿Cuál es el ancho de los salones?</p>
+          <input type="text" id="width_roomValue">
+          <input type="submit" id="enviarWidth_room" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="length_room">
+          <p>¿Cuál es el largo los salones?</p>
+          <input type="text" id="length_roomValue">
+          <input type="submit" id="enviarLength_room" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="masks_type">
+          <p>¿Qué tipo de tabpabocas utilizan?</p>
+          <select id="masks_typeValue">
+            <option selected disabled>Escoge una opción...</option>
+            <option value="quirurjico">Quirúrjico</option>
+            <option value="tela">Tela</option>
+            <option value="N95">N95</option>
+            </select>  
+          <input type="submit" id="enviarMasks_type" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="ventilation_level">
+          <p>¿Cuál es el nivel de ventilación?</p>
+          <select id="ventilation_levelValue">
+            <option selected disabled>Escoge una opción...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="15">14</option>
+            <option value="15">15</option>
+            </select>  
+          <input type="submit" id="enviarVentilation_level" value="Enviar">
+        </div>
+        <hr class="rounded">
+        <div id="class_duration">
+          <p>¿Cuántas horas de clase tiene al día?</p>
+          <select id="class_durationValue">
+            <option selected disabled>Escoge una opción...</option>
+            <option value="1">1 hora</option>
+            <option value="2">2 horas</option>
+            <option value="3">3 horas</option>
+            <option value="4">4 horas</option>
+            <option value="5">5 horas</option>
+            <option value="6">6 horas</option>
+            <option value="7">7 horas</option>
+            <option value="8">8 horas</option>
+            <option value="9">9 horas</option>
+            <option value="10">10 horas</option>
+            </select>  
+          <input type="submit" id="enviarClass_duration" value="Enviar">
+        </div>
+        
+    </div>
+    
+    <div id="salidasDiv">
+      <div id="canvas1Div">
+        <h1>Intervention efficiency in external layers</h1>
+        <canvas id="canvas1"></canvas>
+      </div>  
+      <div id="canvas2Div">
+        <h1>Percentage of occupation at school.</h1>
+        <canvas id="canvas2"></canvas>
+      </div> 
+      <div id="canvas3Div">
+        <h1>Percentage of occupation at workplaces.</h1>
+        <canvas id="canvas3"></canvas>
+      </div> 
+    </div>
+  </body>
 </html>

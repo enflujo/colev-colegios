@@ -54,7 +54,7 @@ export const entrada = {
   fijos: {
     intervention: {
       tipo: 'float',
-      descripcion: 'Intervention efficiancy in external layers.',
+      descripcion: 'Intervention efficiency in external layers.',
     },
     school_occupation: {
       tipo: 'float',
