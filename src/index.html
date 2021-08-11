@@ -8,8 +8,8 @@
   </head>
   <body>
     <div id="app">
-      <div id="entradas" class="hidden">
-        <div id="n_teachers" class="entrada entradaNumerica">
+      <div id="entradas">
+        <div id="n_teachers" class="entrada entradaNumerica active">
           <p class="pregunta">¿Cuántos profesores trabajan en tu colegio?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <div id="n_teachers_vacc" class="entrada entradaNumerica">
+        <div id="n_teachers_vacc" class="entrada entradaNumerica hidden">
           <p class="pregunta">¿Cuántos profesores de tu colegio están vacunados?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <div id="n_school_going" class="entrada entradaNumerica">
+        <div id="n_school_going" class="entrada entradaNumerica hidden">
           <p class="pregunta">¿Cuántos estudiantes asisten a tu colegio?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <div id="n_classrooms" class="entrada entradaNumerica">
+        <div id="n_classrooms" class="entrada entradaNumerica hidden">
           <p class="pregunta">¿Cuántos salones tiene tu colegio?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -45,7 +45,7 @@
           </div>
         </div>
 
-        <div id="classroom_size" class="entrada entradaNumerica">
+        <div id="classroom_size" class="entrada entradaNumerica hidden">
           <p class="pregunta">¿Cuántos estudiantes están en el mismo salón?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div id="school_type" class="entrada entradaOpcion">
+        <div id="school_type" class="entrada entradaOpcion hidden">
           <p class="pregunta">¿Es colegio privado?</p>
           <ul class="seleccion">
             <li>
@@ -68,7 +68,7 @@
           </ul>
         </div>
 
-        <div id="height_room" class="entrada entradaRango">
+        <div id="height_room" class="entrada entradaRango hidden">
           <p class="pregunta">¿Cuál es la altura de los salones?</p>
           <div class="respuesta uiRango">
             <input id="alturaSalon" class="rango" type="range" name="alturaSalon" min="0" max="100" value="0" />
@@ -77,7 +77,7 @@
           </div>
         </div>
 
-        <div id="width_room" class="entrada">
+        <div id="width_room" class="entrada hidden">
           <p class="pregunta">¿Cuál es el ancho de los salones?</p>
           <div class="respuesta uiRango">
             <input id="anchoSalon" class="rango" type="range" name="alturaSalon" min="0" max="100" value="0" />
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <div id="length_room" class="entrada">
+        <div id="length_room" class="entrada hidden">
           <p class="pregunta">¿Cuál es el largo los salones?</p>
           <div class="respuesta uiRango">
             <input id="largoSalon" class="rango" type="range" name="alturaSalon" min="0" max="100" value="0" />
@@ -95,7 +95,7 @@
           </div>
         </div>
 
-        <div id="masks_type" class="entrada">
+        <div id="masks_type" class="entrada hidden">
           <p class="pregunta">¿Qué tipo de tabpabocas utilizas?</p>
           <ul class="seleccion">
             <li>
@@ -113,29 +113,25 @@
           </ul>
         </div>
 
-        <div id="ventilation_level" class="entrada">
+        <div id="ventilation_level" class="entrada hidden">
           <p>¿Cuál es el nivel de ventilación?</p>
-          <select id="ventilation_levelValue">
-            <option selected disabled>Escoge una opción...</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="15">14</option>
-            <option value="15">15</option>
-          </select>
+          <ul class="seleccion">
+            <li>
+              <input type="radio" id="alto" name="nivelVentilacion" />
+              <label for="alto">Alto</label>
+            </li>
+            <li>
+              <input type="radio" id="medio" name="nivelVentilacion" />
+              <label for="medio">Medio</label>
+            </li>
+            <li>
+              <input type="radio" id="bajo" name="nivelVentilacion" />
+              <label for="bajo">Bajo</label>
+            </li>
+          </ul>
         </div>
 
-        <div id="class_duration" class="entrada entradaNumerica">
+        <div id="class_duration" class="entrada entradaNumerica hidden">
           <p>¿Cuántas horas de clase tiene al día?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -144,10 +140,17 @@
           </div>
         </div>
       </div>
-
+    </div>
+    <div id="buttonEnviardatos">
+      <button id="botonEnviarDatos" class="hidden">Enviar datos</button>
+    </div>
       <div id="resultado">
-        <div id="porcentaje"></div>
-      </div>
+        <div id="porcentaje">
+          <div id="porcentajeAvanzado"></div>
+        </div>
+    </div>
+    <div>
+      <div id="informacionContextual"></div>
     </div>
   </body>
 </html>

@@ -118,7 +118,10 @@ input[type='range'] {
     appearance: none;
   }
 }
-
+.hidden {
+  pointer-events: none;
+  opacity: 0.4;
+}
 .seleccion {
   list-style: none;
   display: flex;
@@ -187,4 +190,41 @@ input[type='range'] {
     height: 20px;
     background-color: #67b2c4;
   }
+  #porcentajeAvanzado {
+    display: block;
+    width: 0.1%;
+    height: 20px;
+    background-color: #04aa6d;
+  }
+}
+#buttonEnviardatos {
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  margin: 0;
+  position: relative;
+  background-color: #dff3f13a;
+}
+.btn-disable {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  /*Button disabled - CSS color class*/
+  color: #c0c0c0;
+  background-color: #ffffff;
+}
+.btn-enabled {
+  cursor: pointer;
+  pointer-events: all;
+
+  color: #fff;
+  background-color: #dff3f13a;
+}
+#informacionContextual {
+  background-color: blue;
+  width: 100%;
 }
