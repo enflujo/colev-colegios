@@ -135,114 +135,49 @@ class_duration.addEventListener('click', () => {
 //Event listeners mouseover
 
 n_teachers.addEventListener('mouseover', () => {
-  informacionContextual.innerText = 'informacion contextual del numero de profesores'
+  informacionContextual.innerText = 'El número aproximado de profesores/as que van a trabajar a tu colegio, teniendo en cuenta tanto a quienes trabajan en planta como a quienes van temporalmente a las instalaciones.'
 })
 
 n_teachers_vacc.addEventListener('mouseover', () => {
-  informacionContextual.innerText = 'Otras información diferente'
+  informacionContextual.innerText = 'Teniendo en cuenta la fase de vacunación y los datos aportados en el colegio, aproximadamente cuántos profesores/as deberían estar vacunados en el momento en el que respondes esta encuesta.'
 })
 
+n_school_going.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'A partir de número de estudiantes por cada salón y el número de salones o cursos, cuál es el aproximado de estudiantes que asisten a tu colegio.'
+})
 
+n_classrooms.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'El número de salones que son empleados diariamente, incluyendo salones en donde se realizan actividades extra-académicas.'
+})
 
+classroom_size.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'El número de estudiantes que asisten diariamente y que se reúnen en un mismo espacio durante toda la jornada escolar.'
+})
 
+school_type.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'El colegio es privado o es un colegio financiado por la nación o los entes territoriales.'
+})
 
+height_room.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'Cuántos metros aproximadamente tienen de alto los salones a los que asisten los estudiantes.'
+})
 
+width_room.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'La cantidad de metros aproximados contados desde la pared izquierda hasta la pared de la derecha en relación a la ubicación del tablero.'
+})
 
+length_room.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'La cantidad de metros aproximados contados desde la pared del frente hasta la pared de atrás en relación a la ubicación del tablero.'
+})
 
+masks_type.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'Cuál es el material y las especificaciones del tapabocas que empleas para asistir a lugares públicos.'
+})
 
+ventilation_level.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'Dependiendo del número de ventanas, el alto y ancho de las mismas y la cantidad de ellas que pueden abrirse, indica un nivel aproximado de ventilación en el salón de clase.'
+})
 
-// const enviarNTeachers = document.getElementById('enviarNTeachers');
-// const enviarN_teachers_vacc = document.getElementById('enviarN_teachers_vacc');
-// const enviarN_school_going = document.getElementById('enviarN_school_going');
-// const enviarN_classrooms = document.getElementById('enviarN_classrooms');
-// const enviarClassroom_size = document.getElementById('enviarClassroom_size');
-// const enviarSchool_type = document.getElementById('enviarSchool_type');
-// const enviarHeight_room = document.getElementById('enviarHeight_room');
-// const enviarWidth_room = document.getElementById('enviarWidth_room');
-// const enviarLength_room = document.getElementById('enviarLength_room');
-// const enviarMasks_type = document.getElementById('enviarMasks_type');
-// const enviarVentilation_level = document.getElementById('enviarVentilation_level');
-// const enviarClass_duration = document.getElementById('enviarClass_duration');
-
-// const canvas1 = document.getElementById('canvas1');
-// const ctx1 = canvas1.getContext('2d');
-
-// enviarNteachers.addEventListener('click', () => {
-//   const n_teachersValue = document.getElementById('n_teachersValue').value;
-//   entrada.modificables.n_teachers.value = n_teachersValue;
-//   return false;
-// });
-
-// enviarN_teachers_vacc.addEventListener('click', () => {
-//   const n_teachers_vaccValue = document.getElementById('n_teachers_vaccValue').value;
-//   entrada.modificables.n_teachers_vacc.value = n_teachers_vaccValue;
-//   return false;
-// });
-
-// enviarN_school_going.addEventListener('click', () => {
-//   const n_school_goingValue = document.getElementById('n_school_goingValue').value;
-//   entrada.modificables.n_school_going.value = n_school_goingValue;
-//   return false;
-// });
-
-// enviarN_classrooms.addEventListener('click', () => {
-//   const n_classroomsValue = document.getElementById('n_classroomsValue').value;
-//   entrada.modificables.n_classrooms.value = n_classroomsValue;
-//   return false;
-// });
-
-// enviarN_classrooms.addEventListener('click', () => {
-//   const n_classroomsValue = document.getElementById('n_classroomsValue').value;
-//   entrada.modificables.n_classrooms.value = n_classroomsValue;
-//   return false;
-// });
-
-// enviarClassroom_size.addEventListener('click', () => {
-//   const classroom_sizeValue = document.getElementById('classroom_sizeValue').value;
-//   entrada.modificables.classroom_size.value = classroom_sizeValue;
-//   return false;
-// });
-
-// enviarSchool_type.addEventListener('click', () => {
-//   const school_typeValue = document.getElementById('school_typeValue').value;
-//   entrada.modificables.school_type.value = school_typeValue;
-//   return false;
-// });
-// enviarHeight_room.addEventListener('click', () => {
-//   const height_roomValue = document.getElementById('height_roomValue').value;
-//   entrada.modificables.height_room.value = height_roomValue;
-//   return false;
-// });
-// enviarWidth_room.addEventListener('click', () => {
-//   const width_roomValue = document.getElementById('width_roomValue').value;
-//   entrada.modificables.width_room.value = width_roomValue;
-//   return false;
-// });
-// enviarLength_room.addEventListener('click', () => {
-//   const length_roomValue = document.getElementById('length_roomValue').value;
-//   entrada.modificables.length_room.value = length_roomValue;
-//   return false;
-// });
-// enviarMasks_type.addEventListener('click', () => {
-//   const masks_typeValue = document.getElementById('masks_typeValue').value;
-//   entrada.modificables.masks_type.value = masks_typeValue;
-//   return false;
-// });
-// enviarVentilation_level.addEventListener('click', () => {
-//   const ventilation_levelValue = document.getElementById('ventilation_levelValue').value;
-//   entrada.modificables.ventilation_level.value = ventilation_levelValue;
-//   return false;
-// });
-// enviarClass_duration.addEventListener('click', () => {
-//   const class_durationValue = document.getElementById('class_durationValue').value;
-//   entrada.modificables.class_duration.value = class_durationValue;
-//   return false;
-// });
-
-// console.log(entrada.modificables);
-// /**
-//  * Otra interfaz para mostrar los resultados de la predicción que hace el modelo
-//  * Están en salida
-//  */
-
-// console.log(salida);
+class_duration.addEventListener('mouseover', () => {
+  informacionContextual.innerText = 'La duración de la jornada escolar, descontando aquellas horas donde se realizan actividades al aire libre..'
+})
