@@ -57,6 +57,8 @@ function actualizarBarraPorcentaje() {
   const actives = document.querySelectorAll(".active");
   let widthActual = ((actives.length) / (entradas.length)) * 100;
   porcentajeAvanzado.style.width = widthActual + "%";
+  let widthActualSinDecimales = Math.floor(widthActual);
+  porcentajeAvanzado.innerText = widthActualSinDecimales + "% avanzado";
   console.log(widthActual, entradas.length, actives.length);
 }
 
