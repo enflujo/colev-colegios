@@ -6,5 +6,296 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Regreso a los colegios</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <div id="intro">
+        <h1>De vuelta al colegio!</h1>
+        <p>
+          De vuelta al colegio! es una plataforma que permite evaluar el nivel de riesgo de estudiantes, profesores y
+          administrativos con el retorno de las clases presenciales. Teniendo en cuenta que la virtualización de la
+          educación a causa de la pandemia ha traído consigo complejos retos, así como efectos indeseados en el
+          aprendizaje, la sociabilidad y la calidad educativa de niños y jóvenes en todo el país, esta plataforma te
+          brinda información confiable y precisa con la que puedas evaluar tu nivel de riego a partir de las condiciones
+          físicas y sanitarias particulares a tu colegio.
+        </p>
+        <p>
+          Los datos que introduces en la plataforma son calculados por un modelo de inteligencia artificial diseñado por
+          expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19,
+          recolectados por el Instituto Nacional de Salud y por las secretarías de salud de cada ente territorial.
+          Aunque los resultados del modelo son previsiones aproximadas del nivel de riesgo de contagios, esta
+          información le permite a tu colegio y sus miembros tomar las medidas biosanitarias requeridas para asegurar un
+          bajo nivel de riesgo de contagio.
+        </p>
+        <p>Responde las preguntas y el modelo arrojará una predicción ajustada a tus propias condiciones.</p>
+      </div>
+      <div id="entradas">
+        <div id="n_teachers" class="entrada entradaNumerica active">
+          <p class="pregunta">¿Cuántos profesores trabajan en tu colegio?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="n_teachersValue"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="n_teachers_vacc" class="entrada entradaNumerica hidden">
+          <p class="pregunta">¿Cuántos profesores de tu colegio están vacunados?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="n_teachers_vaccValue"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="n_school_going" class="entrada entradaNumerica hidden">
+          <p class="pregunta">¿Cuántos estudiantes de tu mismo nivel educativo asisten a tu colegio?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="n_school_goingValue"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="n_classrooms" class="entrada entradaNumerica hidden">
+          <p class="pregunta">¿Cuántos salones tiene tu colegio?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="n_classroomsValue"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="classroom_size" class="entrada entradaNumerica hidden">
+          <p class="pregunta">¿Cuántos estudiantes están en el mismo salón?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="classroom_sizeValue"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="school_type" class="entrada entradaOpcion hidden">
+          <p class="pregunta">¿Es colegio privado?</p>
+          <form class="in seleccion" data-nombre="opcionColegio">
+            <input autocomplete="off" type="radio" id="colegioPublico" name="opcionColegio" value="publico" />
+            <label for="colegioPublico">Público</label>
+            <input autocomplete="off" type="radio" id="colegioPrivado" name="opcionColegio" value="privado" />
+            <label for="colegioPrivado">Privado</label>
+          </form>
+        </div>
+
+        <div id="height_room" class="entrada entradaRango hidden">
+          <p class="pregunta">¿Cuál es la altura de los salones?</p>
+          <div class="respuesta uiRango">
+            <input
+              autocomplete="off"
+              id="alturaSalon"
+              class="rango"
+              type="range"
+              name="alturaSalon"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <input
+              autocomplete="off"
+              id="alturaSalonValor"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <span>metros</span>
+          </div>
+        </div>
+
+        <div id="width_room" class="entrada hidden">
+          <p class="pregunta">¿Cuál es el ancho de los salones?</p>
+          <div class="respuesta uiRango">
+            <input
+              autocomplete="off"
+              id="anchoSalon"
+              class="rango"
+              type="range"
+              name="alturaSalon"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <input
+              autocomplete="off"
+              id="anchoSalonValor"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <span>metros</span>
+          </div>
+        </div>
+
+        <div id="length_room" class="entrada hidden">
+          <p class="pregunta">¿Cuál es el largo los salones?</p>
+          <div class="respuesta uiRango">
+            <input
+              autocomplete="off"
+              id="largoSalon"
+              class="rango"
+              type="range"
+              name="alturaSalon"
+              min="0"
+              max="100"
+              value="0"
+            />
+            <input
+              autocomplete="off"
+              id="largoSalonValor"
+              class="in cantidad"
+              min="0"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <span>metros</span>
+          </div>
+        </div>
+
+        <div id="masks_type" class="entrada hidden">
+          <p class="pregunta">¿Qué tipo de tapabocas utilizas?</p>
+          <form class="in seleccion" data-nombre="opcionMascara">
+            <input autocomplete="off" type="radio" id="quirurjico" name="opcionMascara" value="surgical" />
+            <label for="quirurjico">Quirurjico</label>
+
+            <input autocomplete="off" type="radio" id="tela" name="opcionMascara" value="cloth" />
+            <label for="tela">Tela</label>
+
+            <input autocomplete="off" type="radio" id="n95" name="opcionMascara" value="N95" />
+            <label for="n95">N95</label>
+          </form>
+        </div>
+
+        <div id="ventilation_level" class="entrada hidden">
+          <p>¿Cuál es el nivel de ventilación?</p>
+          <form class="in seleccion" data-nombre="nivelVentilacion">
+            <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="15" />
+            <label for="alto">Alto</label>
+
+            <input autocomplete="off" type="radio" id="medio" name="nivelVentilacion" value="8" />
+            <label for="medio">Medio</label>
+
+            <input autocomplete="off" type="radio" id="bajo" name="nivelVentilacion" bajo="2" />
+            <label for="bajo">Bajo</label>
+          </form>
+        </div>
+
+        <div id="class_duration" class="entrada entradaNumerica hidden">
+          <p>¿Cuántas horas de clase tiene al día?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="class_durationValue"
+              class="in cantidad"
+              min="1"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="n_workplace_going" class="entrada entradaNumerica hidden">
+          <p>¿Con cuántas personas compartes en tu trabajo?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="class_durationValue"
+              class="in cantidad"
+              min="1"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+
+        <div id="n_workplace_nearby_size" class="entrada entradaNumerica hidden">
+          <p>¿Con cuántas personas tienes contacto cercano en tu trabajo?</p>
+          <div class="respuesta">
+            <button class="restar"></button>
+            <input
+              autocomplete="off"
+              id="class_durationValue"
+              class="in cantidad"
+              min="1"
+              name="cantidad"
+              value=""
+              type="number"
+            />
+            <button class="sumar"></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="salidas">
+        <div id="resultado">
+          <div id="porcentaje">
+            <div id="porcentajeAvanzado"></div>
+          </div>
+        </div>
+
+        <div>
+          <div id="informacionContextual"></div>
+        </div>
+        <div id="buttonEnviardatos">
+          <button id="botonEnviarDatos">Enviar datos</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
