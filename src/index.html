@@ -11,21 +11,12 @@
       <div id="intro">
         <h1>De vuelta al colegio!</h1>
         <p>
-          De vuelta al colegio! es una plataforma que permite evaluar el nivel de riesgo de contagio de estudiantes, profesores y
-          administrativos con el retorno de las clases presenciales. Teniendo en cuenta que la virtualización de la
-          educación a causa de la pandemia ha traído consigo complejos retos, así como efectos indeseados en el
-          aprendizaje, la sociabilidad y la calidad educativa de niños y jóvenes en todo el país, esta plataforma te
-          brinda información confiable y precisa con la cual podrás evaluar el nivel de riesgo a partir de las condiciones
-          físicas y sanitarias particulares a tu colegio.
+          ¡De vuelta al colegio! es una plataforma que, con el retorno de las clases presenciales, permite evaluar el nivel de riesgo de contagio que enfrentan todas las personas que hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en las condiciones físicas y sanitarias de cada colegio.
         </p>
         <p>
-          Los datos que introduces en la plataforma son calculados por un modelo de inteligencia artificial diseñado por
-          expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19,
-          recolectados por el Instituto Nacional de Salud y por las secretarías de salud de cada ente territorial.
-          Aunque los resultados del modelo son previsiones aproximadas del nivel de riesgo de contagio, esta
-          información le permite a tu colegio y a sus miembros tomar las medidas biosanitarias requeridas para asegurar el nivel más bajo de riesgo posible.
+          Los datos que introduces en la plataforma son calculados por un modelo de inteligencia artificial diseñado por expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19, recolectados por el Instituto Nacional de Salud y por las secretarías de salud de cada ente territorial.
         </p>
-        <p>Las respuestas al primer bloque de preguntas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos nieveles, o no cuentas con la información suficiente para responder, puedes omitir algunas preguntas; sin embargo, para que el modelo funcione correctamente, debes responder por lo menos las preguntas relativas al nivel educativo que cursa el estudiante. El segundo bloque de preguntas debe ser respondido de forma obligatoria. </p>
+        <!-- <p>Las respuestas al primer bloque de preguntas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos nieveles, o no cuentas con la información suficiente para responder, puedes omitir algunas preguntas; sin embargo, para que el modelo funcione correctamente, debes responder por lo menos las preguntas relativas al nivel educativo que cursa el estudiante. El segundo bloque de preguntas debe ser respondido de forma obligatoria. </p> -->
         <p>Te invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a tus propias condiciones.</p>
       </div>
       <div id="entradas">
@@ -34,7 +25,7 @@
           <div id="preescolar">
             <h1>Preescolar</h1>
             <div id="n_school_going_preschool" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de preescolar asisten a tu colegio?</p>
+              <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -51,7 +42,7 @@
             </div>
 
             <div id="classroom_size_preschool" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de preescolar se reunen en el mismo salón?</p>
+              <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -68,7 +59,7 @@
             </div>
 
             <div id="n_teachers_preschool" class="entrada entradaNumerica active">
-              <p class="pregunta">¿Cuántos profesores trabajan presencialmente en preescolar?</p>
+              <p class="pregunta">Número total de profesores</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -85,7 +76,7 @@
             </div>
 
             <div id="height_room_preschool" class="entrada entradaRango hidden">
-              <p class="pregunta">¿Cuál es la altura de los salones de preescolar?</p>
+              <p class="pregunta">Altura de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -111,7 +102,7 @@
             </div>
 
             <div id="width_room_preschool" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el ancho de los salones de preescolar?</p>
+              <p class="pregunta">Ancho de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -137,7 +128,7 @@
             </div>
 
             <div id="length_room_preschool" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el largo los salones de preescolar?</p>
+              <p class="pregunta">Largo de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -169,7 +160,7 @@
           <div id="primaria">
             <h1>Primaria</h1>
             <div id="n_school_going_primary" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de primaria asisten a tu colegio?</p>
+              <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -186,7 +177,7 @@
             </div>
 
             <div id="classroom_size_primary" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de primaria se reunen en el mismo salón?</p>
+              <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -203,7 +194,7 @@
             </div>
 
             <div id="n_teachers_primary" class="entrada entradaNumerica active">
-              <p class="pregunta">¿Cuántos profesores trabajan presencialmente en primaria?</p>
+              <p class="pregunta">Número total de profesores</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -220,7 +211,7 @@
             </div>
 
             <div id="height_room_primary" class="entrada entradaRango hidden">
-              <p class="pregunta">¿Cuál es la altura de los salones de primaria?</p>
+              <p class="pregunta">Altura de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -245,7 +236,7 @@
               </div>
             </div>
             <div id="width_room_primary" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el ancho de los salones de primaria?</p>
+              <p class="pregunta">Ancho de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -271,7 +262,7 @@
             </div>
 
             <div id="length_room_primary" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el largo los salones de primaria?</p>
+              <p class="pregunta">Largo de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -303,7 +294,7 @@
           <div id="secundaria">
             <h1>Secundaria</h1>
             <div id="n_school_going_highschool" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de secundaria asisten a tu colegio?</p>
+              <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -320,7 +311,7 @@
             </div>
 
             <div id="classroom_size_highschool" class="entrada entradaNumerica hidden">
-              <p class="pregunta">¿Cuántos estudiantes de secundaria se reunen en el mismo salón?</p>
+              <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -337,7 +328,7 @@
             </div>
 
             <div id="n_teachers_highschool" class="entrada entradaNumerica active">
-              <p class="pregunta">¿Cuántos profesores trabajan presencialmente en secundaria?</p>
+              <p class="pregunta">Número total de profesores</p>
               <div class="respuesta">
                 <button class="restar"></button>
                 <input
@@ -354,7 +345,7 @@
             </div>
 
             <div id="height_room_highschool" class="entrada entradaRango hidden">
-              <p class="pregunta">¿Cuál es la altura de los salones de secundaria?</p>
+              <p class="pregunta">Altura de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -380,7 +371,7 @@
             </div>
 
             <div id="width_room_highschool" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el ancho de los salones de secundaria?</p>
+              <p class="pregunta">Ancho de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -406,7 +397,7 @@
             </div>
 
             <div id="length_room_highschool" class="entrada hidden">
-              <p class="pregunta">¿Cuál es el largo los salones de secundaria?</p>
+              <p class="pregunta">Largo de los salones</p>
               <div class="respuesta uiRango">
                 <input
                   autocomplete="off"
@@ -435,7 +426,7 @@
         <div id="segundoBloque">
           <!--Se deja sólo para guardar los datos-->        
           <div id="school_type" class="entrada entradaOpcion hidden">
-            <p class="pregunta">¿Qué tipo de colegio es?</p>
+            <p class="pregunta">Tipo de colegio</p>
             <form class="in seleccion" data-nombre="opcionColegio">
               <input autocomplete="off" type="radio" id="colegioPublico" name="opcionColegio" value="publico" />
               <label for="colegioPublico">Público</label>
@@ -446,7 +437,7 @@
 
           <!--masks_type-->        
           <div id="masks_type" class="entrada hidden">
-            <p class="pregunta">¿Qué tipo de tapabocas utilizas?</p>
+            <p class="pregunta">Tipo de tapabocas</p>
             <form class="in seleccion" data-nombre="opcionMascara">
               <input autocomplete="off" type="radio" id="quirurjico" name="opcionMascara" value="surgical" />
               <label for="quirurjico">Quirúrjico</label>
@@ -463,7 +454,7 @@
 
           <!--ventilation_level-->        
           <div id="ventilation_level" class="entrada hidden">
-            <p>¿Cuál es el nivel de ventilación? (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y ventanas abiertas sin tránsito significativo de viento, es decir, que está ubicado al interior de la construcción; ventilación alta: ventanas y puertas abiertas con tránsito de viento, es decir, ubicado en espacios amplios o con límite al exterior de la construcción.)</p>
+            <p>Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y puertas abiertas con tránsito de viento.)</p>
             <form class="in seleccion" data-nombre="nivelVentilacion">
               <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="15" />
               <label for="alto">Alto</label>
@@ -480,7 +471,7 @@
 
           <!--class_duration-->        
           <div id="class_duration" class="entrada entradaNumerica hidden">
-            <p>¿Cuántas horas de clase pasas dentro del salón? (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades que se realicen por fuera de los salones)</p>
+            <p>Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades por fuera de los salones)</p>
             <div class="respuesta">
               <button class="restar"></button>
               <input
