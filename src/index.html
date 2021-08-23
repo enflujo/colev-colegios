@@ -9,20 +9,33 @@
   <body>
     <div id="app">
       <div id="intro">
-        <h1>De vuelta al colegio!</h1>
+        <h1>¡De vuelta al colegio!</h1>
+				<h2>¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases presenciales? Conózcala con esta aplicación.</h2>
         <p>
-          ¡De vuelta al colegio! es una plataforma que, con el retorno de las clases presenciales, permite evaluar el nivel de riesgo de contagio que enfrentan todas las personas que hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en las condiciones físicas y sanitarias de cada colegio.
+          ¡De vuelta al colegio! permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en las condiciones físicas y sanitarias de cada colegio.
         </p>
         <p>
-          Los datos que introduces en la plataforma son calculados por un modelo de inteligencia artificial diseñado por expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19, recolectados por el Instituto Nacional de Salud y por las secretarías de salud de cada ente territorial.
+          Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado por expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que han sido recolectados por instituciones oficiales.
         </p>
-        <!-- <p>Las respuestas al primer bloque de preguntas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos nieveles, o no cuentas con la información suficiente para responder, puedes omitir algunas preguntas; sin embargo, para que el modelo funcione correctamente, debes responder por lo menos las preguntas relativas al nivel educativo que cursa el estudiante. El segundo bloque de preguntas debe ser respondido de forma obligatoria. </p> -->
-        <p>Te invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a tus propias condiciones.</p>
+        <p>Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a sus propias condiciones.</p>
       </div>
       <div id="entradas">
-        <div id="primerBloque">
+        <!--Se deja sólo para guardar los datos-->        
+        <div id="school_type" class="entrada entradaOpcion hidden">
+          <p class="pregunta">Tipo de colegio</p>
+          <form class="in seleccion" data-nombre="opcionColegio">
+            <input autocomplete="off" type="radio" id="colegioPublico" name="opcionColegio" value="publico" />
+            <label for="colegioPublico">Público</label>
+            <input autocomplete="off" type="radio" id="colegioPrivado" name="opcionColegio" value="privado" />
+            <label for="colegioPrivado">Privado</label>
+          </form>
+        </div>
+        <div id="bloqueNivelEducativo">
           <!--Preescolar-->
           <div id="preescolar">
+            <div class="nivelEducativoIntro">
+              <p>Las respuestas a este bloque de preguntas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos niveles, o no cuenta con la información suficiente para responder, puede omitir algunas preguntas. Sin embargo, para que el modelo funcione correctamente, nuestra recomendación es que intente respoder la mayoría. </p>
+            </div>  
             <h1>Preescolar</h1>
             <div id="n_school_going_preschool" class="entrada entradaNumerica hidden">
               <p class="pregunta">Número total de estudiantes</p>
@@ -34,7 +47,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -51,7 +64,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -68,7 +81,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -84,18 +97,19 @@
                   class="rango"
                   type="range"
                   name="alturaSalon"
-                  min="0"
-                  max="100"
+                  min="0.01"
+                  max="20"
                   value="0"
                 />
                 <input
                   autocomplete="off"
                   id="alturaSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.001"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
+									step="0.01"
                 />
                 <span>metros</span>
               </div>
@@ -120,7 +134,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -146,7 +160,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -169,7 +183,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -186,7 +200,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -203,7 +217,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -229,7 +243,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -254,7 +268,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -280,7 +294,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -303,7 +317,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -320,7 +334,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -337,7 +351,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <button class="sumar"></button>
@@ -363,7 +377,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -389,7 +403,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -415,7 +429,7 @@
                   class="in cantidad"
                   min="0"
                   name="cantidad"
-                  value=""
+                  value="0"
                   type="number"
                 />
                 <span>metros</span>
@@ -424,16 +438,6 @@
           </div>
         </div>
         <div id="segundoBloque">
-          <!--Se deja sólo para guardar los datos-->        
-          <div id="school_type" class="entrada entradaOpcion hidden">
-            <p class="pregunta">Tipo de colegio</p>
-            <form class="in seleccion" data-nombre="opcionColegio">
-              <input autocomplete="off" type="radio" id="colegioPublico" name="opcionColegio" value="publico" />
-              <label for="colegioPublico">Público</label>
-              <input autocomplete="off" type="radio" id="colegioPrivado" name="opcionColegio" value="privado" />
-              <label for="colegioPrivado">Privado</label>
-            </form>
-          </div>
 
           <!--masks_type-->        
           <div id="masks_type" class="entrada hidden">
@@ -456,39 +460,41 @@
           <div id="ventilation_level" class="entrada hidden">
             <p>Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y puertas abiertas con tránsito de viento.)</p>
             <form class="in seleccion" data-nombre="nivelVentilacion">
-              <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="15" />
+              <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="alto" />
               <label for="alto">Alto</label>
 
-              <input autocomplete="off" type="radio" id="medio" name="nivelVentilacion" value="8" />
+              <input autocomplete="off" type="radio" id="medio" name="nivelVentilacion" value="medio" />
               <label for="medio">Medio</label>
 
-              <input autocomplete="off" type="radio" id="bajo" name="nivelVentilacion" bajo="2" />
+              <input autocomplete="off" type="radio" id="bajo" name="nivelVentilacion" value="bajo" />
               <label for="bajo">Bajo</label>
             </form>
           </div>
 
 
 
-          <!--class_duration-->        
-          <div id="class_duration" class="entrada entradaNumerica hidden">
-            <p>Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades por fuera de los salones)</p>
-            <div class="respuesta">
-              <button class="restar"></button>
-              <input
-                autocomplete="off"
-                id="class_durationValue"
-                class="in cantidad"
-                min="1"
-                name="cantidad"
-                value=""
-                type="number"
-              />
-              <button class="sumar"></button>
-            </div>
-          </div>
+            <!--class_duration-->        
+					<div id="class_duration" class="entrada entradaNumerica hidden">
+						<p>Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades por fuera de los salones)</p>
+						<div class="respuesta">
+							<button class="restar"></button>
+							<input
+								autocomplete="off"
+								id="class_durationValue"
+								class="in cantidad"
+								min="1"
+								name="cantidad"
+								value=""
+								type="number"
+							/>
+							<button class="sumar"></button>
+						</div>
+					</div>
         </div>  
       </div>
 
+
+      <!--Salidas-->
       <div id="salidas">
         <div id="resultado">
           <div id="porcentaje">
