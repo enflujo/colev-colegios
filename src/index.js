@@ -1,5 +1,32 @@
 import './scss/styles.scss';
 import contextos from './utilidades/contextos';
+import Viz from './modulos/Viz';
+
+const ws = new WebSocket('ws://localhost:8000/ws');
+const viz = new Viz();
+
+ws.onopen = () => {
+  console.log('Conexión exitosa');
+};
+
+ws.onmessage = (e) => {
+  const mensaje = JSON.parse(e.data);
+
+  if (mensaje.tipo === 'fin') {
+    viz.calcularResultados();
+  } else if (mensaje.tipo === 'nodos') {
+    viz.pintarNodos(mensaje.datos);
+  } else if (mensaje.tipo === 'estado') {
+    viz.sumarEstado(mensaje.datos);
+  }
+
+  // Pedir siguiente estado
+  ws.send(
+    JSON.stringify({
+      tipo: 'sim',
+    })
+  );
+};
 
 const restas = document.querySelectorAll('.restar');
 const sumas = document.querySelectorAll('.sumar');
@@ -67,7 +94,7 @@ function actualizarBarraPorcentaje() {
 }
 
 botonEnviarDatos.onclick = async () => {
-  let url = 'http://localhost:8000/?';
+  const datos = {};
 
   entradas.forEach((entrada, i) => {
     const parametro = entrada.id;
@@ -81,17 +108,23 @@ botonEnviarDatos.onclick = async () => {
 
     if (parametro === 'school_type') {
       valor = valor === 'publico' ? true : false;
-    } else if (parametro === 'ventilation_level') {
-      valor = +valor;
     }
-    console.log(parametro, valor);
-    url += `${parametro}=${valor}`;
-    url += i < entradas.length - 1 ? '&' : '';
+
+    if (input.type === 'number') {
+      if (input.value === '0' || input.value === '') {
+        return;
+      } else {
+        valor = +input.value;
+      }
+    }
+
+    if (typeof valor === 'string' && !valor.length) return;
+
+    datos[parametro] = valor;
   });
-  console.log(url);
-  const peticion = await fetch(url);
-  const datos = await peticion.json();
-  console.log(datos);
+
+  const msg = { tipo: 'inicio', datos: datos };
+  ws.send(JSON.stringify(msg));
 };
 
 for (let llave in contextos) {
