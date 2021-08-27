@@ -30,9 +30,9 @@ ws.onmessage = (e) => {
 
 const restas = document.querySelectorAll('.restar');
 const sumas = document.querySelectorAll('.sumar');
-const rangos = document.querySelectorAll('.uiRango');
 const valores = document.querySelectorAll('.in');
 const entradas = document.querySelectorAll('.entrada');
+const botonesRapidos = document.querySelectorAll('.br');
 
 const informacionContextual = document.getElementById('informacionContextual');
 
@@ -57,18 +57,11 @@ sumas.forEach((btn) => {
   };
 });
 
-rangos.forEach((elemento) => {
-  const rango = elemento.querySelector('.rango');
-  const valor = elemento.querySelector('.cantidad');
-
-  rango.oninput = () => {
-    valor.value = rango.value;
-    valor.dispatchEvent(new Event('change'));
-  };
-
-  valor.oninput = () => {
-    rango.value = valor.value;
-  };
+botonesRapidos.forEach((btn) => {
+  btn.onclick = (e) => {
+    const input = e.target.parentNode.parentNode.querySelector('input[type=number]');
+    input.value = btn.value
+  }
 });
 
 valores.forEach((entrada) => {
