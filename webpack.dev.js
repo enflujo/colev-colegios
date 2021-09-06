@@ -7,11 +7,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   target: 'web',
-  devServer: {
-    watchOptions: {
-      ignored: '/node_modules/',
-    },
-  },
+  devServer: {},
   module: {
     rules: [
       {

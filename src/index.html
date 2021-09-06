@@ -10,14 +10,26 @@
     <div id="app">
       <div id="intro">
         <h1>¡De vuelta al colegio!</h1>
-				<h2>¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases presenciales? Conózcala con esta aplicación.</h2>
+        <h2>
+          ¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases presenciales?
+          Conózcala con esta aplicación.
+        </h2>
         <p>
-          ¡De vuelta al colegio! permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en las condiciones físicas y sanitarias de cada colegio.
+          ¡De vuelta al colegio! permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que
+          hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo
+          un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y
+          precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en
+          las condiciones físicas y sanitarias de cada colegio.
         </p>
         <p>
-          Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado por expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que han sido recolectados por instituciones oficiales.
+          Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado por
+          expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que han
+          sido recolectados por instituciones oficiales.
         </p>
-        <p>Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a sus propias condiciones.</p>
+        <p>
+          Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a
+          sus propias condiciones.
+        </p>
       </div>
       <div id="entradas">
         <!--Se deja sólo para guardar los datos-->        
@@ -34,8 +46,13 @@
           <!--Preescolar-->
           <div id="preescolar">
             <div class="nivelEducativoIntro">
-              <p>Las respuestas a este bloque de preguntas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos niveles, o no cuenta con la información suficiente para responder, puede omitir algunas preguntas. Sin embargo, para que el modelo funcione correctamente, nuestra recomendación es que intente respoder la mayoría. </p>
-            </div>  
+              <p>
+                Las respuestas a este bloque de preguntas dependen de los niveles educativos que ofrece el colegio
+                (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos niveles, o no cuenta con la
+                información suficiente para responder, puede omitir algunas preguntas. Sin embargo, para que el modelo
+                funcione correctamente, nuestra recomendación es que intente respoder la mayoría.
+              </p>
+            </div>
             <h1>Preescolar</h1>
             <div id="n_school_going_preschool" class="entrada entradaNumerica ">
               <p class="pregunta">Número total de estudiantes</p>
@@ -166,8 +183,6 @@
                 </div>
               </div>
             </div>
-
-
 
           <!--Primaria-->
           <div id="primaria">
@@ -301,7 +316,6 @@
             </div>
           </div>
         </div>
-
 
           <!--Secundaria-->
           <div id="secundaria">
@@ -437,7 +451,6 @@
           </div>
         </div>
         <div id="segundoBloque">
-
           <!--masks_type-->        
           <div id="masks_type" class="entrada ">
             <p class="pregunta">Tipo de tapabocas</p>
@@ -452,9 +465,6 @@
               <label for="n95">N95</label>
             </form>
           </div>
-
-
-
           <!--ventilation_level-->        
           <div id="ventilation_level" class="entrada ">
             <p>Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y puertas abiertas con tránsito de viento.)</p>
@@ -469,7 +479,6 @@
               <label for="bajo">Bajo</label>
             </form>
           </div>
-
 
 
             <!--class_duration-->        
@@ -493,7 +502,6 @@
         </div>  
       </div>
 
-
       <!--Salidas-->
       <div id="salidas">
         <div id="resultado">
@@ -509,12 +517,17 @@
           <button id="botonEnviarDatos">Enviar datos</button>
         </div>
       </div>
+
+      <div id="tablero">
+        <div id="porcentajeSim">
+          <h3>Simulación: <span class="contador">0%</span></h3>
+          <p>Probabilidad contagio: <span id="contagio"></span></p>
+        </div>
+        <div id="todos"></div>
+      </div>
     </div>
   </body>
 </html>
-
-
-
 
 <!-- <div id="n_teachers_vacc" class="entrada entradaNumerica ">
           <p class="pregunta">¿Cuántos profesores de tu colegio están vacunados?</p>

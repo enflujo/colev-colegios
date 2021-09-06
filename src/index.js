@@ -1,9 +1,11 @@
 import './scss/styles.scss';
 import contextos from './utilidades/contextos';
 import Viz from './modulos/Viz';
+import Porcentaje from './modulos/Porcentaje';
 
 const ws = new WebSocket('ws://localhost:8000/ws');
 const viz = new Viz();
+const proceso = new Porcentaje();
 
 ws.onopen = () => {
   console.log('Conexión exitosa');
@@ -17,7 +19,8 @@ ws.onmessage = (e) => {
   } else if (mensaje.tipo === 'nodos') {
     viz.pintarNodos(mensaje.datos);
   } else if (mensaje.tipo === 'estado') {
-    viz.sumarEstado(mensaje.datos);
+    viz.sumarEstado(mensaje);
+    proceso.actualizar();
   }
 
   // Pedir siguiente estado
@@ -27,7 +30,7 @@ ws.onmessage = (e) => {
     })
   );
 };
-
+const tablero = document.getElementById('tablero');
 const restas = document.querySelectorAll('.restar');
 const sumas = document.querySelectorAll('.sumar');
 const valores = document.querySelectorAll('.in');
@@ -35,7 +38,6 @@ const entradas = document.querySelectorAll('.entrada');
 const botonesRapidos = document.querySelectorAll('.br');
 
 const informacionContextual = document.getElementById('informacionContextual');
-
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const porcentajeAvanzado = document.getElementById('porcentajeAvanzado');
 
@@ -117,7 +119,9 @@ botonEnviarDatos.onclick = async () => {
   });
 
   const msg = { tipo: 'inicio', datos: datos };
+
   ws.send(JSON.stringify(msg));
+  tablero.style.display = 'block';
 };
 
 for (let llave in contextos) {
