@@ -32,8 +32,8 @@
         </p>
       </div>
       <div id="entradas">
-        <!--Se deja sólo para guardar los datos-->
-        <div id="school_type" class="entrada entradaOpcion hidden">
+        <!--Se deja sólo para guardar los datos-->        
+        <div id="school_type" class="entrada entradaOpcion ">
           <p class="pregunta">Tipo de colegio</p>
           <form class="in seleccion" data-nombre="opcionColegio">
             <input autocomplete="off" type="radio" id="colegioPublico" name="opcionColegio" value="publico" />
@@ -54,7 +54,7 @@
               </p>
             </div>
             <h1>Preescolar</h1>
-            <div id="n_school_going_preschool" class="entrada entradaNumerica hidden">
+            <div id="n_school_going_preschool" class="entrada entradaNumerica ">
               <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -71,7 +71,7 @@
               </div>
             </div>
 
-            <div id="classroom_size_preschool" class="entrada entradaNumerica hidden">
+            <div id="classroom_size_preschool" class="entrada entradaNumerica ">
               <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -105,90 +105,89 @@
               </div>
             </div>
 
-            <div id="height_room_preschool" class="entrada entradaRango hidden">
+            <div id="height_room_preschool" class="entrada entradaNumerica ">
               <p class="pregunta">Altura de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta">
+                <button class="restar"></button>
                 <input
-                  autocomplete="off"
-                  id="alturaSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0.01"
-                  max="20"
-                  value="0"
+                autocomplete="off"
+                id="alturaSalonValor"
+                class="in cantidad"
+                min="0.1"
+                name="cantidad"
+                value="0"
+                type="number"
+                step="0.1"
                 />
-                <input
-                  autocomplete="off"
-                  id="alturaSalonValor"
-                  class="in cantidad"
-                  min="0.001"
-                  name="cantidad"
-                  value="0"
-                  type="number"
-                  step="0.01"
-                />
+                <button class="sumar"></button>
                 <span>metros</span>
+                
+              
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
 
-            <div id="width_room_preschool" class="entrada hidden">
+            <div id="width_room_preschool" class="entrada entradaNumerica">
               <p class="pregunta">Ancho de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="anchoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="anchoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
-              </div>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                  <div id="botonesRapidos">
+                    <button id="BR" class="br" value="1.5">1.5mts</button>
+                    <button id="BR" class="br" value="2">2mts</button>
+                    <button id="BR" class="br" value="2.5">2.5mts</button>
+                    <button id="BR" class="br" value="3">3mts</button>
+                  </div>
+              </div>    
             </div>
 
-            <div id="length_room_preschool" class="entrada hidden">
+            <div id="length_room_preschool" class="entrada entradaNumerica">
               <p class="pregunta">Largo de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="largoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="largoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
-          </div>
 
           <!--Primaria-->
           <div id="primaria">
             <h1>Primaria</h1>
-            <div id="n_school_going_primary" class="entrada entradaNumerica hidden">
+            <div id="n_school_going_primary" class="entrada entradaNumerica ">
               <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -205,7 +204,7 @@
               </div>
             </div>
 
-            <div id="classroom_size_primary" class="entrada entradaNumerica hidden">
+            <div id="classroom_size_primary" class="entrada entradaNumerica ">
               <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -239,88 +238,89 @@
               </div>
             </div>
 
-            <div id="height_room_primary" class="entrada entradaRango hidden">
+            <div id="height_room_primary" class="entrada entradaNumerica ">
               <p class="pregunta">Altura de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="alturaSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="alturaSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
-            <div id="width_room_primary" class="entrada hidden">
+            <div id="width_room_primary" class="entrada entradaNumerica">
               <p class="pregunta">Ancho de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="anchoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="anchoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
 
-            <div id="length_room_primary" class="entrada hidden">
+            <div id="length_room_primary" class="entrada entradaNumerica">
               <p class="pregunta">Largo de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="largoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="largoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
           <!--Secundaria-->
           <div id="secundaria">
             <h1>Secundaria</h1>
-            <div id="n_school_going_highschool" class="entrada entradaNumerica hidden">
+            <div id="n_school_going_highschool" class="entrada entradaNumerica ">
               <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -337,7 +337,7 @@
               </div>
             </div>
 
-            <div id="classroom_size_highschool" class="entrada entradaNumerica hidden">
+            <div id="classroom_size_highschool" class="entrada entradaNumerica ">
               <p class="pregunta">Número de estudiantes por salón</p>
               <div class="respuesta">
                 <button class="restar"></button>
@@ -371,88 +371,88 @@
               </div>
             </div>
 
-            <div id="height_room_highschool" class="entrada entradaRango hidden">
+            <div id="height_room_highschool" class="entrada entradaNumerica ">
               <p class="pregunta">Altura de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="alturaSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="alturaSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
 
-            <div id="width_room_highschool" class="entrada hidden">
+            <div id="width_room_highschool" class="entrada entradaNumerica">
               <p class="pregunta">Ancho de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="anchoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="anchoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
 
-            <div id="length_room_highschool" class="entrada hidden">
+            <div id="length_room_highschool" class="entrada entradaNumerica">
               <p class="pregunta">Largo de los salones</p>
-              <div class="respuesta uiRango">
+              <div class="respuesta  ">
+                <button class="restar"></button>
                 <input
                   autocomplete="off"
                   id="largoSalon"
-                  class="rango"
-                  type="range"
-                  name="alturaSalon"
-                  min="0"
-                  max="100"
-                  value="0"
-                />
-                <input
-                  autocomplete="off"
-                  id="largoSalonValor"
                   class="in cantidad"
-                  min="0"
+                  min="0.1"
                   name="cantidad"
                   value="0"
                   type="number"
-                />
-                <span>metros</span>
+                  step="0.1"
+                  />
+                  <button class="sumar"></button>
+                  <span>metros</span>
+                  
+                <div id="botonesRapidos">
+                  <button id="BR" class="br" value="1.5">1.5mts</button>
+                  <button id="BR" class="br" value="2">2mts</button>
+                  <button id="BR" class="br" value="2.5">2.5mts</button>
+                  <button id="BR" class="br" value="3">3mts</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div id="segundoBloque">
-          <!--masks_type-->
-          <div id="masks_type" class="entrada hidden">
+          <!--masks_type-->        
+          <div id="masks_type" class="entrada ">
             <p class="pregunta">Tipo de tapabocas</p>
             <form class="in seleccion" data-nombre="opcionMascara">
               <input autocomplete="off" type="radio" id="quirurjico" name="opcionMascara" value="surgical" />
@@ -465,14 +465,9 @@
               <label for="n95">N95</label>
             </form>
           </div>
-
-          <!--ventilation_level-->
-          <div id="ventilation_level" class="entrada hidden">
-            <p>
-              Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media:
-              salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y
-              puertas abiertas con tránsito de viento.)
-            </p>
+          <!--ventilation_level-->        
+          <div id="ventilation_level" class="entrada ">
+            <p>Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y puertas abiertas con tránsito de viento.)</p>
             <form class="in seleccion" data-nombre="nivelVentilacion">
               <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="alto" />
               <label for="alto">Alto</label>
@@ -485,27 +480,26 @@
             </form>
           </div>
 
-          <!--class_duration-->
-          <div id="class_duration" class="entrada entradaNumerica hidden">
-            <p>
-              Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso,
-              alimentación y/o otras actividades por fuera de los salones)
-            </p>
-            <div class="respuesta">
-              <button class="restar"></button>
-              <input
-                autocomplete="off"
-                id="class_durationValue"
-                class="in cantidad"
-                min="1"
-                name="cantidad"
-                value=""
-                type="number"
-              />
-              <button class="sumar"></button>
-            </div>
-          </div>
-        </div>
+
+            <!--class_duration-->        
+					<div id="class_duration" class="entrada entradaNumerica ">
+						<p>Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades por fuera de los salones)</p>
+						<div class="respuesta">
+							<button class="restar"></button>
+							<input
+								autocomplete="off"
+								id="class_durationValue"
+								class="in cantidad"
+								min="1"
+								name="cantidad"
+								value=""
+								type="number"
+							/>
+							<button class="sumar"></button>
+						</div>
+					</div>
+
+        </div>  
       </div>
 
       <!--Salidas-->
@@ -535,7 +529,7 @@
   </body>
 </html>
 
-<!-- <div id="n_teachers_vacc" class="entrada entradaNumerica hidden">
+<!-- <div id="n_teachers_vacc" class="entrada entradaNumerica ">
           <p class="pregunta">¿Cuántos profesores de tu colegio están vacunados?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -552,7 +546,7 @@
           </div>
         </div> -->
 
-<!-- <div id="n_classrooms" class="entrada entradaNumerica hidden">
+<!-- <div id="n_classrooms" class="entrada entradaNumerica ">
           <p class="pregunta">¿Cuántos salones tiene tu colegio?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -568,8 +562,8 @@
             <button class="sumar"></button>
           </div>
         </div> -->
-
-<!-- <div id="n_workplace_going" class="entrada entradaNumerica hidden">
+        
+        <!-- <div id="n_workplace_going" class="entrada entradaNumerica ">
           <p>¿Con cuántas personas compartes en tu trabajo?</p>
           <div class="respuesta">
             <button class="restar"></button>
@@ -586,7 +580,7 @@
           </div>
         </div>
 
-        <div id="n_workplace_nearby_size" class="entrada entradaNumerica hidden">
+        <div id="n_workplace_nearby_size" class="entrada entradaNumerica ">
           <p>¿Con cuántas personas tienes contacto cercano en tu trabajo?</p>
           <div class="respuesta">
             <button class="restar"></button>
