@@ -62,8 +62,8 @@ sumas.forEach((btn) => {
 botonesRapidos.forEach((btn) => {
   btn.onclick = (e) => {
     const input = e.target.parentNode.parentNode.querySelector('input[type=number]');
-    input.value = btn.value
-  }
+    input.value = btn.value;
+  };
 });
 
 valores.forEach((entrada) => {
@@ -121,7 +121,8 @@ botonEnviarDatos.onclick = async () => {
   const msg = { tipo: 'inicio', datos: datos };
 
   ws.send(JSON.stringify(msg));
-  tablero.style.display = 'block';
+  tablero.style.display = 'flex';
+  viz.linea.pintar();
 };
 
 for (let llave in contextos) {
