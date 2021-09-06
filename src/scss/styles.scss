@@ -4,6 +4,7 @@ $altoColumna: 100vh;
   background-color: #9cadac9a;
   color: #e2e2e2;
 }
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -224,4 +225,117 @@ input[type='range'] {
 #informacionContextual {
   background-color: blue;
   width: 100%;
+}
+
+$radio: 5px;
+
+#todos {
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+}
+
+#porcentaje {
+  color: #97d8c0;
+}
+
+#tablero {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: #2a363bf8;
+  display: none;
+
+  .persona {
+    width: $radio;
+    position: absolute;
+    display: block;
+    border: transparent;
+    border-radius: 50%;
+    // margin: 5px;
+    transform-origin: center;
+    transition: all 0.35s ease-in-out;
+
+    &.preschool {
+      height: $radio;
+      background-color: #ebcb16;
+      animation: pulsoPreschool 0.8s infinite;
+      box-shadow: 0 0 0 #ebcb16;
+    }
+
+    &.primary {
+      height: $radio;
+      background-color: #04aa6d;
+      animation: pulsoPimary 0.8s infinite;
+      box-shadow: 0 0 0 #04aa6d;
+    }
+
+    &.highschool {
+      height: $radio;
+      background-color: #67b2c4;
+      animation: pulsoHighschool 0.8s infinite;
+      box-shadow: 0 0 0 #67b2c4;
+    }
+
+    &.work {
+      height: $radio;
+      background-color: rgba(219, 182, 133, 1);
+      animation: pulsoWork 0.8s infinite;
+      box-shadow: 0 0 0 rgba(219, 182, 133, 1);
+    }
+
+    &.other {
+      height: $radio;
+      background-color: rgb(151, 151, 151);
+    }
+  }
+}
+
+@keyframes pulsoPreschool {
+  from {
+    box-shadow: 0 0 0 0 #ebcb16;
+  }
+  70% {
+    box-shadow: 0 0 0 $radio #ebcb1600;
+  }
+  to {
+    box-shadow: 0 0 0 0 #ebcb1600;
+  }
+}
+
+@keyframes pulsoPimary {
+  from {
+    box-shadow: 0 0 0 0 #04aa6d;
+  }
+  70% {
+    box-shadow: 0 0 0 $radio #04aa6d00;
+  }
+  to {
+    box-shadow: 0 0 0 0 #04aa6d00;
+  }
+}
+
+@keyframes pulsoHighschool {
+  from {
+    box-shadow: 0 0 0 0 #67b2c4;
+  }
+  70% {
+    box-shadow: 0 0 0 $radio #67b2c400;
+  }
+  to {
+    box-shadow: 0 0 0 0 #67b2c400;
+  }
+}
+
+@keyframes pulsoWork {
+  from {
+    box-shadow: 0 0 0 0 rgba(219, 182, 133, 1);
+  }
+  70% {
+    box-shadow: 0 0 0 $radio rgba(219, 182, 133, 0);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(219, 182, 133, 0);
+  }
 }
