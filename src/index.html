@@ -462,7 +462,7 @@
           </div>
           <!--ventilation_level-->
           <div id="ventilation_level" class="entrada">
-            <p>
+            <p class="pregunta">
               Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media:
               salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y
               puertas abiertas con tránsito de viento.)
@@ -481,7 +481,7 @@
 
           <!--class_duration-->
           <div id="class_duration" class="entrada entradaNumerica">
-            <p>
+            <p class="pregunta">
               Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso,
               alimentación y/o otras actividades por fuera de los salones)
             </p>
@@ -506,6 +506,7 @@
       <div id="salidas">
         <div id="resultado">
           <div id="porcentaje">
+            <span id="porcentajeEtiqueta"></span>
             <div id="porcentajeAvanzado"></div>
           </div>
         </div>
@@ -513,9 +514,8 @@
         <div>
           <div id="informacionContextual"></div>
         </div>
-        <div id="buttonEnviardatos">
-          <button id="botonEnviarDatos">Enviar datos</button>
-        </div>
+
+        <div id="botonEnviarDatos">Iniciar simulación</div>
       </div>
 
       <div id="tablero">
