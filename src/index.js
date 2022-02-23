@@ -40,6 +40,7 @@ const botonesRapidos = document.querySelectorAll('.br');
 const informacionContextual = document.getElementById('informacionContextual');
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const porcentajeAvanzado = document.getElementById('porcentajeAvanzado');
+const etiqueta = document.getElementById('porcentajeEtiqueta');
 
 let completados = 0;
 
@@ -63,6 +64,7 @@ botonesRapidos.forEach((btn) => {
   btn.onclick = (e) => {
     const input = e.target.parentNode.parentNode.querySelector('input[type=number]');
     input.value = btn.value;
+    input.dispatchEvent(new Event('change'));
   };
 });
 
@@ -81,7 +83,7 @@ function actualizarBarraPorcentaje() {
   let widthActual = (completados / valores.length) * 100;
   porcentajeAvanzado.style.width = widthActual + '%';
   let widthActualSinDecimales = Math.floor(widthActual);
-  porcentajeAvanzado.innerText = widthActualSinDecimales + '% avanzado';
+  etiqueta.innerText = widthActualSinDecimales + '%';
 
   if (completados === valores.length) {
     botonEnviarDatos.disabled = false;
