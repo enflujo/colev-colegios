@@ -7,7 +7,9 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   target: 'web',
-  devServer: {},
+  devServer: {
+    static: path.resolve(__dirname, 'public'),
+  },
   module: {
     rules: [
       {
