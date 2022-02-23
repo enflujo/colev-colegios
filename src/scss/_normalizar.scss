@@ -1,0 +1,29 @@
+::selection {
+  background-color: #9cadac9a;
+  color: #e2e2e2;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fuentePrincipal;
+  background: linear-gradient(to bottom, #467873, #67b2c4);
+  color: #fafafa;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

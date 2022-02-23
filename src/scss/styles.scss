@@ -1,33 +1,47 @@
-$altoColumna: 100vh;
+@import './constantes';
+@import './mixins';
+@import './normalizar';
 
-::selection {
-  background-color: #9cadac9a;
-  color: #e2e2e2;
+// Estilos generales y pantallas muy pequeñas de celular
+@import './pantallas/base';
+
+// Teléfonos horizontal
+@media (min-width: $minCelular) {
+  @import './pantallas/celulares';
 }
 
-html {
-  box-sizing: border-box;
-  height: 100%;
+// Pantallas medianas (Tablets)
+@media (min-width: $minTablet) {
+  @import './pantallas/tabletas';
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+// Dispositivos grandes y pantallas medianas
+@media (min-width: $minPantalla) {
+  @import './pantallas/pantallasMedianas';
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
-    sans-serif;
-  background: linear-gradient(to bottom, #284542, #67b2c4);
-  color: #fafafa;
+// Pantallas grandes
+@media (min-width: $minPantallaGrande) {
+  @import './pantallas/pantallasGrandes';
 }
 
 #app {
   display: flex;
+}
+
+#intro {
+  width: 30vw;
+  padding: 2em;
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+}
+
+#salidas {
+  position: fixed;
+  right: 0;
+  width: 30vw;
+  padding: 2em;
 }
 
 #entradas {
@@ -36,6 +50,7 @@ body {
   flex-direction: column;
   width: 40vw;
   padding: 2em;
+  margin-left: 30vw;
 
   .entrada {
     display: flex;
@@ -62,11 +77,6 @@ input[type='number'] {
   }
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
 input[type='radio'] {
   appearance: none;
   border-radius: 50%;
@@ -81,6 +91,9 @@ input[type='radio'] {
 
   & + label {
     color: #072b2b;
+    font-size: 0.8em;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.3em;
   }
 
   &:checked {
@@ -140,6 +153,13 @@ input[type='range'] {
 
 .respuesta {
   display: flex;
+
+  span {
+    font-size: 0.8em;
+    margin: 0.5em 0 0 0.6em;
+    font-style: italic;
+    opacity: 0.8;
+  }
 }
 
 .entradaNumerica {
@@ -186,34 +206,47 @@ button.br {
   }
 }
 
+#botonEnviarDatos {
+  display: block;
+  padding: 0.5em;
+  cursor: pointer;
+  background-color: #04aa6d;
+  width: 40%;
+  text-align: center;
+  margin: 2em auto;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #072b2b;
+  }
+}
+
 #resultado {
   padding: 2em;
-  width: 60vw;
+
   #porcentaje {
     display: block;
     width: 100%;
-    height: 20px;
+    height: 3px;
     background-color: #67b2c4;
+    position: relative;
   }
+
+  #porcentajeEtiqueta {
+    text-align: center;
+    position: absolute;
+    top: -24px;
+    width: 100%;
+  }
+
   #porcentajeAvanzado {
     display: block;
-    width: 0.1%;
-    height: 20px;
-    background-color: #04aa6d;
+    width: 0%;
+    height: 6px;
+    background-color: #00ffa1db;
   }
 }
-#buttonEnviardatos {
-  outline: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  width: 6rem;
-  margin: 0;
-  position: relative;
-  background-color: #dff3f13a;
-}
+
 .btn-disable {
   cursor: not-allowed;
   pointer-events: none;
@@ -233,8 +266,6 @@ button.br {
   width: 100%;
   opacity: 0.9;
 }
-
-$radio: 5px;
 
 #todos {
   width: 30vw;
@@ -325,54 +356,6 @@ $radio: 5px;
   margin: 0;
 }
 
-@keyframes pulsoPreschool {
-  from {
-    box-shadow: 0 0 0 0 #ebcb16;
-  }
-  70% {
-    box-shadow: 0 0 0 $radio #ebcb1600;
-  }
-  to {
-    box-shadow: 0 0 0 0 #ebcb1600;
-  }
-}
-
-@keyframes pulsoPimary {
-  from {
-    box-shadow: 0 0 0 0 #04aa6d;
-  }
-  70% {
-    box-shadow: 0 0 0 $radio #04aa6d00;
-  }
-  to {
-    box-shadow: 0 0 0 0 #04aa6d00;
-  }
-}
-
-@keyframes pulsoHighschool {
-  from {
-    box-shadow: 0 0 0 0 #67b2c4;
-  }
-  70% {
-    box-shadow: 0 0 0 $radio #67b2c400;
-  }
-  to {
-    box-shadow: 0 0 0 0 #67b2c400;
-  }
-}
-
-@keyframes pulsoWork {
-  from {
-    box-shadow: 0 0 0 0 rgba(219, 182, 133, 1);
-  }
-  70% {
-    box-shadow: 0 0 0 $radio rgba(219, 182, 133, 0);
-  }
-  to {
-    box-shadow: 0 0 0 0 rgba(219, 182, 133, 0);
-  }
-}
-
 #poblaciones {
   display: flex;
   justify-content: space-around;
@@ -442,16 +425,4 @@ $radio: 5px;
 
 #lineasDeTiempo {
   margin: 30px 0;
-}
-
-#intro {
-  width: 30vw;
-  padding: 2em;
-}
-
-#salidas {
-  position: fixed;
-  right: 0;
-  width: 30vw;
-  padding: 2em;
 }
