@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Regreso a los colegios</title>
+    <title>¡De vuelta al colegio!</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="COLEV: ¡De vuelta al colegio!" />
+    <meta name="application-name" content="COLEV: ¡De vuelta al colegio!" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <div id="app">
-      <div id="intro">
+    <main id="app">
+      <section id="intro">
         <h1>¡De vuelta al colegio!</h1>
         <h2>
           ¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases presenciales?
@@ -30,8 +39,9 @@
           Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a
           sus propias condiciones.
         </p>
-      </div>
-      <div id="entradas">
+      </section>
+
+      <section id="entradas">
         <!--Se deja sólo para guardar los datos-->
         <div id="school_type" class="entrada entradaOpcion">
           <p class="pregunta">Tipo de colegio</p>
@@ -47,13 +57,13 @@
           <div id="preescolar">
             <div class="nivelEducativoIntro">
               <p>
-                Las respuestas a este bloque de preguntas dependen de los niveles educativos que ofrece el colegio
-                (preescolar, primaria y secundaria). Si el colegio no ofrece alguno de estos niveles, o no cuenta con la
-                información suficiente para responder, puede omitir algunas preguntas. Sin embargo, para que el modelo
-                funcione correctamente, nuestra recomendación es que intente respoder la mayoría.
+                Las respuestas dependen de los niveles educativos que ofrece el colegio (preescolar, primaria y
+                secundaria). Si el colegio no ofrece alguno de estos niveles, o no cuenta con la información suficiente
+                para responder, puede omitir algunas preguntas. Sin embargo, para que el modelo funcione correctamente,
+                nuestra recomendación es que intente responder la mayoría.
               </p>
             </div>
-            <h1>Preescolar</h1>
+            <h2 class="tituloSeccion">Preescolar</h2>
             <div id="n_school_going_preschool" class="entrada entradaNumerica">
               <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
@@ -184,7 +194,7 @@
 
             <!--Primaria-->
             <div id="primaria">
-              <h1>Primaria</h1>
+              <h2 class="tituloSeccion">Primaria</h2>
               <div id="n_school_going_primary" class="entrada entradaNumerica">
                 <p class="pregunta">Número total de estudiantes</p>
                 <div class="respuesta">
@@ -317,7 +327,7 @@
 
           <!--Secundaria-->
           <div id="secundaria">
-            <h1>Secundaria</h1>
+            <h2 class="tituloSeccion">Secundaria</h2>
             <div id="n_school_going_highschool" class="entrada entradaNumerica">
               <p class="pregunta">Número total de estudiantes</p>
               <div class="respuesta">
@@ -500,10 +510,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!--Salidas-->
-      <div id="salidas">
+      <section id="salidas">
         <div id="resultado">
           <div id="porcentaje">
             <span id="porcentajeEtiqueta"></span>
@@ -516,9 +526,9 @@
         </div>
 
         <div id="botonEnviarDatos">Iniciar simulación</div>
-      </div>
+      </section>
 
-      <div id="tablero">
+      <section id="tablero">
         <div id="col1">
           <div id="porcentajeSim">
             <h3>Simulación: <span class="contador">0%</span></h3>
@@ -574,7 +584,54 @@
 
           <div id="lineasDeTiempo"></div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <section>
+        <h3>Creado por:</h3>
+        <div class="logos">
+          <a href="https://colev.uniandes.edu.co/" target="_blank">
+            <img src="./imgs/colev-facultades-v.svg" alt="COLEV Uniandes" class="logo" />
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h3>Apoyan:</h3>
+        <div class="logos">
+          <a href="https://www.idrc.ca/es/lo-que-hacemos/america-latina-y-el-caribe" target="_blank">
+            <img src="./imgs/IDRC.svg" alt="IDRC LATAM" class="logo" />
+          </a>
+          <a href="https://www.sida.se/en" target="_blank">
+            <img src="./imgs/sida.svg" alt="SIDA" class="logo" />
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h3>Parte de:</h3>
+        <div class="logos">
+          <a href="https://covidsouth.ai/?lang=es" target="_blank">
+            <img src="./imgs/COVIDAI LOGO VECTOR-color.svg" alt="COVIDAI" class="logo" />
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h3>Desarrollo:</h3>
+        <div class="logos">
+          <a
+            href="https://ingbiomedica.uniandes.edu.co/es/investigacion/lineas-investigacion/biologia-matematica-computacional/"
+            target="_blank"
+          >
+            BIOMAC
+          </a>
+          <a href="https://enflujo.com/" target="_blank">
+            <img src="./imgs/EnFlujo-h.svg" alt="Laboratorio EnFlujo" class="logo" />
+          </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
