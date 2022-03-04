@@ -25,13 +25,9 @@
   @import './pantallas/pantallasGrandes';
 }
 
-#app {
-  display: flex;
-}
-
 #intro {
   width: 30vw;
-  padding: 2em;
+  padding: 2em 2em 8em 2em;
   position: fixed;
   height: 100vh;
   overflow: auto;
@@ -51,6 +47,7 @@
   width: 40vw;
   padding: 2em;
   margin-left: 30vw;
+  margin-bottom: 5em;
 
   .entrada {
     display: flex;
@@ -59,14 +56,59 @@
   }
 }
 
+#footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+  background-color: #cce4e4;
+  color: #072b2b;
+  width: 100%;
+
+  section {
+    padding: 0.5em 1em;
+  }
+
+  .logos {
+    display: flex;
+
+    a {
+      margin-right: 1.5em;
+      transition: 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 0.9em;
+    margin: 0 0 10px 0;
+  }
+}
+
+.tituloSeccion {
+  letter-spacing: 1.5px;
+  border-bottom: 1px dotted;
+  font-weight: normal;
+  padding-bottom: 0.5em;
+}
+
+.logo {
+  height: auto;
+  display: block;
+  height: 40px;
+}
+
 input[type='number'] {
   appearance: textfield;
-  max-width: 6rem;
-  padding: 1em;
+  max-width: 3rem;
   border: none;
   border-width: 0 2px;
-  font-size: 1.2em;
-  height: 2rem;
+  font-size: 0.9em;
+  height: 2.3rem;
   text-align: center;
   background-color: #fafafa8c;
 
@@ -126,13 +168,6 @@ input[type='range'] {
   }
 }
 
-.rango {
-  &::-webkit-slider-thumb,
-  &::-moz-slider-thumb {
-    appearance: none;
-  }
-}
-
 .seleccion {
   list-style: none;
   display: flex;
@@ -156,7 +191,7 @@ input[type='range'] {
 
   span {
     font-size: 0.8em;
-    margin: 0.5em 0 0 0.6em;
+    margin: 0.5em 0.6em;
     font-style: italic;
     opacity: 0.8;
   }
@@ -196,13 +231,6 @@ input[type='range'] {
 
   button.sumar:after {
     transform: translate(-50%, -50%) rotate(90deg);
-  }
-}
-
-button.br {
-  &::before,
-  &::after {
-    display: none !important;
   }
 }
 
@@ -247,21 +275,6 @@ button.br {
   }
 }
 
-.btn-disable {
-  cursor: not-allowed;
-  pointer-events: none;
-
-  /*Button disabled - CSS color class*/
-  color: #c0c0c0;
-  background-color: #ffffff;
-}
-.btn-enabled {
-  cursor: pointer;
-  pointer-events: all;
-
-  color: #fff;
-  background-color: #dff3f13a;
-}
 #informacionContextual {
   width: 100%;
   opacity: 0.9;
@@ -296,35 +309,35 @@ button.br {
 
     &.preschool {
       height: $radio;
-      background-color: #ebcb16;
+      background-color: $colorPreescolar;
       animation: pulsoPreschool 0.8s infinite;
-      box-shadow: 0 0 0 #ebcb16;
+      box-shadow: 0 0 0 $colorPreescolar;
     }
 
     &.primary {
       height: $radio;
-      background-color: #04aa6d;
+      background-color: $colorPrimaria;
       animation: pulsoPimary 0.8s infinite;
-      box-shadow: 0 0 0 #04aa6d;
+      box-shadow: 0 0 0 $colorPrimaria;
     }
 
     &.highschool {
       height: $radio;
-      background-color: #67b2c4;
+      background-color: $colorBachillerato;
       animation: pulsoHighschool 0.8s infinite;
-      box-shadow: 0 0 0 #67b2c4;
+      box-shadow: 0 0 0 $colorBachillerato;
     }
 
     &.work {
       height: $radio;
-      background-color: rgba(219, 182, 133, 1);
+      background-color: $colorPadres;
       animation: pulsoWork 0.8s infinite;
-      box-shadow: 0 0 0 rgba(219, 182, 133, 1);
+      box-shadow: 0 0 0 $colorPadres;
     }
 
     &.other {
       height: $radio;
-      background-color: rgb(151, 151, 151);
+      background-color: $colorOtros;
     }
   }
 }
@@ -384,7 +397,7 @@ button.br {
   #preschool {
     .nombre {
       &::before {
-        background-color: #ebcb16;
+        background-color: $colorPreescolar;
       }
     }
   }
@@ -392,7 +405,7 @@ button.br {
   #primary {
     .nombre {
       &::before {
-        background-color: #04aa6d;
+        background-color: $colorPrimaria;
       }
     }
   }
@@ -400,7 +413,7 @@ button.br {
   #highschool {
     .nombre {
       &::before {
-        background-color: #67b2c4;
+        background-color: $colorBachillerato;
       }
     }
   }
@@ -408,7 +421,7 @@ button.br {
   #work {
     .nombre {
       &::before {
-        background-color: rgba(219, 182, 133, 1);
+        background-color: $colorPadres;
       }
     }
   }
@@ -417,7 +430,7 @@ button.br {
     opacity: 0.7;
     .nombre {
       &::before {
-        background-color: rgb(151, 151, 151);
+        background-color: $colorOtros;
       }
     }
   }

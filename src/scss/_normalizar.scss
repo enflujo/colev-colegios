@@ -27,3 +27,32 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+
+.rango {
+  &::-webkit-slider-thumb,
+  &::-moz-slider-thumb {
+    appearance: none;
+  }
+}
+
+button.br {
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+}
