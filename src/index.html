@@ -472,11 +472,8 @@
           </div>
           <!--ventilation_level-->
           <div id="ventilation_level" class="entrada">
-            <p class="pregunta">
-              Nivel de ventilación (Ventilación baja: un salón con al menos una ventana abierta; ventilación media:
-              salón con puertas y ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y
-              puertas abiertas con tránsito de viento.)
-            </p>
+            <p class="pregunta">Nivel de ventilación</p>
+
             <form class="in seleccion" data-nombre="nivelVentilacion">
               <input autocomplete="off" type="radio" id="alto" name="nivelVentilacion" value="alto" />
               <label for="alto">Alto</label>
@@ -488,13 +485,15 @@
               <label for="bajo">Bajo</label>
             </form>
           </div>
+          <p class="descripcion">
+            (Ventilación baja: un salón con al menos una ventana abierta; ventilación media: salón con puertas y
+            ventanas abiertas sin tránsito significativo de viento; ventilación alta: ventanas y puertas abiertas con
+            tránsito de viento.)
+          </p>
 
           <!--class_duration-->
           <div id="class_duration" class="entrada entradaNumerica">
-            <p class="pregunta">
-              Horas de clase al interior del salón (A la jornada escolar debes descontar las horas de descanso,
-              alimentación y/o otras actividades por fuera de los salones)
-            </p>
+            <p class="pregunta">Horas de clase al interior del salón</p>
             <div class="respuesta">
               <button class="restar"></button>
               <input
@@ -509,6 +508,10 @@
               <button class="sumar"></button>
             </div>
           </div>
+          <p class="descripcion">
+            (A la jornada escolar debes descontar las horas de descanso, alimentación y/o otras actividades por fuera de
+            los salones)
+          </p>
         </div>
       </section>
 
