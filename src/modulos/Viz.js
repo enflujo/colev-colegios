@@ -10,18 +10,10 @@ export default class {
     this.radios = [200, 170, 135, 95, 50, 10, 240];
     this.colores = [];
     this.poblaciones = ['highschool', 'preschool', 'primary', 'work', 'other'];
-    this.estados = [
-      'suceptibles',
-      'expuestos',
-      'infectado moderado',
-      'infectado severo',
-      'infectado crítico',
-      'fallecido',
-      'recuperado',
-    ];
+    this.estados = estados;
 
     this.coloresEstado = [
-      '#F9D423', // suceptible
+      '#F9D423', // susceptible
       '#FECEAB', // expuestos
       '#FF847C', // moderado
       '#E84A5F', // severo
@@ -29,6 +21,7 @@ export default class {
       '#13191b', // fallecido
       '#99B898', // recuperado
     ];
+
     this.colorsPoblaciones = [
       '#67b2c4', // highschool
       '#ebcb16', // preschool
