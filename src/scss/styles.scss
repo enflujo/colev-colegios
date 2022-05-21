@@ -25,44 +25,107 @@
   @import './pantallas/pantallasGrandes';
 }
 
-#intro {
-  width: 30vw;
-  padding: 2em 2em 8em 2em;
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
+#portada {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0% auto 10%;
+  padding-top: 18%;
+  width: 45%;
+  text-align: center;
+
+  h1 {
+    margin-bottom: -1%;
+    font-family: $fuenteTitulo;
+    font-weight: 800;
+    font-size: 3.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  h2 {
+    font-family: $fuenteSubtitulo;
+    font-size: 1.9em;
+  }
+
+  .texto {
+    margin-top: 19%;
+    margin-bottom: 11%;
+    font-family: $fuenteTitulo;
+    font-size: 1.6em;
+  }
 }
 
-#salidas {
-  position: fixed;
-  right: 0;
-  width: 30vw;
-  padding: 2em;
+#intro {
+  padding: 2em 2em 8em 2em;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0% auto 1%;
+  overflow: auto;
+  font-size: 1.2em;
 }
 
 #entradas {
-  font-size: 1.2em;
   display: flex;
-  flex-direction: column;
-  width: 40vw;
-  padding: 2em;
-  margin-left: 30vw;
-  margin-bottom: 5em;
+  background-color: #f1f3fccc;
+  font-size: 1.2em;
+  width: 100vw;
+  padding: 2vw 5vh;
+  color: #3163fa;
+  margin-top: 25%;
+  border-radius: 5px;
 
   .entrada {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 40px;
   }
+
+  .seccionIzquierda {
+    padding: 2% 5% 5% 2%;
+    width: 55%;
+  }
+
+  .seccionDerecha {
+    width: 50%;
+    height: fit-content;
+    padding: 2% 5% 5% 2%;
+    margin-top: 10%;
+    background-color: #6364ea;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .pregunta {
+    font-weight: bold;
+    line-height: 0.1em;
+    padding-right: 1em;
+  }
+}
+
+#salidas {
+  right: 0;
+  width: 70vw;
+  padding: 2em;
+}
+
+#salidas {
+  right: 0;
+  width: 70vw;
+  padding: 2em;
 }
 
 #footer {
   display: flex;
   justify-content: space-around;
-  position: fixed;
+  position: relative;
   bottom: 0;
   height: 90px;
-  background-color: #cce4e4;
+  background-color: #fff;
   color: #072b2b;
   width: 100%;
 
@@ -107,10 +170,11 @@ input[type='number'] {
   max-width: 3rem;
   border: none;
   border-width: 0 2px;
-  font-size: 0.9em;
-  height: 2.3rem;
+  font-size: 0.8em;
+  height: 1.2rem;
   text-align: center;
-  background-color: #fafafa8c;
+  background-color: #e7fbfa;
+  color: $colorTexto;
 
   &:focus-visible,
   &:focus {
@@ -124,25 +188,26 @@ input[type='radio'] {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  border: 1px solid #072b2b;
+  border: 1px solid $colorTexto;
   transition: 0.2s all linear;
   margin-right: 5px;
   position: relative;
   top: 4px;
   cursor: pointer;
 
-  & + label {
-    color: #072b2b;
+  &+label {
+    color: $colorTexto;
     font-size: 0.8em;
-    background-color: rgba(255, 255, 255, 0.3);
     padding: 0.3em;
+    border-radius: 4px;
   }
 
   &:checked {
-    border: 8px solid rgb(248, 248, 248);
+    border: 8px solid #35fee3;
 
-    & + label {
-      color: #e9f7f5;
+    &+label {
+      color: $colorTexto;
+      background-color: transparent;
     }
   }
 }
@@ -175,6 +240,7 @@ input[type='range'] {
 
   li {
     display: flex;
+
     &:hover {
       color: #fff;
     }
@@ -198,20 +264,18 @@ input[type='range'] {
 }
 
 .entradaNumerica {
-  display: inline-flex;
+  color: $colorTexto;
+
 
   button {
     outline: none;
     appearance: none;
     background-color: transparent;
     border: none;
-    align-items: center;
-    justify-content: center;
     width: 2rem;
     cursor: pointer;
     margin: 0;
     position: relative;
-    background-color: #dff3f13a;
 
     &:hover {
       background-color: #92726a9c;
@@ -223,9 +287,9 @@ input[type='range'] {
     display: inline-block;
     position: absolute;
     content: '';
-    width: 1rem;
+    width: 0.5rem;
     height: 2px;
-    background-color: #e9e9e9;
+    background-color: $colorTexto;
     transform: translate(-50%, -50%);
   }
 
@@ -428,6 +492,7 @@ input[type='range'] {
 
   #other {
     opacity: 0.7;
+
     .nombre {
       &::before {
         background-color: $colorOtros;

@@ -1,3 +1,16 @@
+/*
+@mixin dots($count) {
+  $text-shadow: ();
+
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+    (-.3+(random()) * 8)+em (-.3+(random()) * 8)+em 95px hsla(random() * 78, 100%, 50%, .9);
+  }
+
+  text-shadow: $text-shadow;
+}
+*/
+
 ::selection {
   background-color: #9cadac9a;
   color: #e2e2e2;
@@ -6,6 +19,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  background: rgba(11, 14, 223, 0.641)
 }
 
 *,
@@ -14,14 +28,67 @@ html {
   box-sizing: inherit;
 }
 
-html,
-body {
+body,
+head {
+  display: block;
   margin: 0;
   padding: 0;
   font-family: $fuentePrincipal;
-  background: linear-gradient(to bottom, #467873, #67b2c4);
-  color: #fafafa;
+  color: transparent;
 }
+
+/*
+head::before,
+head::after,
+body::before,
+body::after {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: '.';
+  mix-blend-mode: screen;
+  animation: 64s -47s move infinite ease-in-out alternate;
+}
+
+
+body::before {
+  @include dots(20);
+  animation-duration: 64s;
+  animation-delay: -32s;
+}
+
+body::after {
+  @include dots(20);
+  animation-duration: 63s;
+  animation-delay: -32s;
+}
+
+head::before {
+  @include dots(20);
+  animation-duration: 62s;
+  animation-delay: -32s;
+}
+
+head::after {
+  @include dots(20);
+  animation-duration: 61s;
+  animation-delay: -32s;
+}
+
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(97) translateX(-20px);
+  }
+
+  to {
+    transform: rotate(360deg) scale(98) translateX(20px);
+  }
+}
+
+*/
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -29,6 +96,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .rango {
+
   &::-webkit-slider-thumb,
   &::-moz-slider-thumb {
     appearance: none;
@@ -36,6 +104,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 button.br {
+
   &::before,
   &::after {
     display: none !important;
