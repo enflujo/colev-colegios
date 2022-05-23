@@ -461,10 +461,16 @@
           </div>
 
           <div id="resultado">
-            <p>Estado del proceso:</p>
             <div id="porcentaje">
-              <span id="porcentajeEtiqueta"></span>
-              <div id="porcentajeAvanzado"></div>
+              <p id="estadoProceso">Estado del proceso:</p>
+              <svg id="porcentajeCirculo" viewBox="0 0 20 20">
+                <path 
+                  d="M2 1
+                  a 1.59 1.59 0 0 1 0 3.18
+                  a 1.59 1.59 0 0 1 0 -3.18"
+                />
+              </svg>
+              <span id="porcentajeEtiqueta">0%</span>
             </div>
           </div>
         </div>

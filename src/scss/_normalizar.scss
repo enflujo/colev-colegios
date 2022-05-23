@@ -1,15 +1,14 @@
-/*
 @mixin dots($count) {
   $text-shadow: ();
 
   @for $i from 0 through $count {
     $text-shadow: $text-shadow,
-    (-.3+(random()) * 8)+em (-.3+(random()) * 8)+em 95px hsla(random() * 78, 100%, 50%, .9);
+    (-.3+(random()) * 8)+em (-.3+(random()) * 8)+em 95px hsla(random() * 78, 10%, 50%, .9);
   }
 
   text-shadow: $text-shadow;
 }
-*/
+
 
 ::selection {
   background-color: #9cadac9a;
@@ -19,7 +18,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  background: rgba(11, 14, 223, 0.641)
+  background: rgba(11, 14, 223, 0.6)
 }
 
 *,
@@ -37,7 +36,7 @@ head {
   color: transparent;
 }
 
-/*
+/////
 head::before,
 head::after,
 body::before,
@@ -50,6 +49,7 @@ body::after {
   content: '.';
   mix-blend-mode: screen;
   animation: 64s -47s move infinite ease-in-out alternate;
+  z-index: 1;
 }
 
 
@@ -88,7 +88,7 @@ head::after {
   }
 }
 
-*/
+//////
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
