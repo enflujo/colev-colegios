@@ -31,13 +31,16 @@
         <p class="texto">Conózcala con esta aplicación</p>
       </div>
       <section id="intro">
+        <div id="botonCerrarIntro">*</div>
+        <div id="texto">
         <p>
-          ¡De vuelta al colegio! permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que
+          <span class="resaltado">¡De vuelta al colegio!</span> permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que
           hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo
-          un riesgo que debe ser mitigado. Con este fin, ¡De vuelta al colegio! pretende brindar datos confiables y
-          precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en
-          las condiciones físicas y sanitarias de cada colegio.
+          un riesgo que debe ser mitigado.
         </p>
+        <p>Con este fin, <span class="resaltado">¡De vuelta al colegio!</span> pretende brindar datos confiables y
+          precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en
+          las condiciones físicas y sanitarias de cada colegio.</p>
         <p>
           Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado por
           expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que han
@@ -47,6 +50,7 @@
           Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a
           sus propias condiciones.
         </p>
+      </div>
       </section>
 
       <div id="entradas">
@@ -68,7 +72,7 @@
               <label for="colegioPrivado">Privado</label>
             </form>
           </div>
-          <div id="bloqueNivelEducativo">
+          <div class="bloqueNivelEducativo">
             <!--Preescolar-->
             <div id="preescolar">
               <h2 class="tituloSeccion">Preescolar</h2>
@@ -176,112 +180,112 @@
                   <button class="sumar"></button>
                 </div>
               </div>
+            </div>
 
-              <!--Primaria-->
-              <div id="primaria">
-                <h2 class="tituloSeccion">Primaria</h2>
-                <div id="n_school_going_primary" class="entrada entradaNumerica">
-                  <p class="pregunta">Número total de estudiantes</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="n_school_goingValue"
-                      class="in cantidad"
-                      min="0"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+            <!--Primaria-->
+            <div id="primaria">
+              <h2 class="tituloSeccion">Primaria</h2>
+              <div id="n_school_going_primary" class="entrada entradaNumerica">
+                <p class="pregunta">Número total de estudiantes</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="n_school_goingValue"
+                    class="in cantidad"
+                    min="0"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                  />
+                  <button class="sumar"></button>
                 </div>
+              </div>
 
-                <div id="classroom_size_primary" class="entrada entradaNumerica">
-                  <p class="pregunta">Número de estudiantes por salón</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="classroom_sizeValue"
-                      class="in cantidad"
-                      min="0"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+              <div id="classroom_size_primary" class="entrada entradaNumerica">
+                <p class="pregunta">Número de estudiantes por salón</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="classroom_sizeValue"
+                    class="in cantidad"
+                    min="0"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                  />
+                  <button class="sumar"></button>
                 </div>
+              </div>
 
-                <div id="n_teachers_primary" class="entrada entradaNumerica active">
-                  <p class="pregunta">Número total de profesores</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="n_teachersValue"
-                      class="in cantidad"
-                      min="0"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+              <div id="n_teachers_primary" class="entrada entradaNumerica active">
+                <p class="pregunta">Número total de profesores</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="n_teachersValue"
+                    class="in cantidad"
+                    min="0"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                  />
+                  <button class="sumar"></button>
                 </div>
+              </div>
 
-                <div id="height_room_primary" class="entrada entradaNumerica">
-                  <p class="pregunta">Altura de los salones (metros)</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="alturaSalon"
-                      class="in cantidad"
-                      min="0.1"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                      step="0.1"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+              <div id="height_room_primary" class="entrada entradaNumerica">
+                <p class="pregunta">Altura de los salones (metros)</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="alturaSalon"
+                    class="in cantidad"
+                    min="0.1"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                    step="0.1"
+                  />
+                  <button class="sumar"></button>
                 </div>
-                <div id="width_room_primary" class="entrada entradaNumerica">
-                  <p class="pregunta">Ancho de los salones (metros)</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="anchoSalon"
-                      class="in cantidad"
-                      min="0.1"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                      step="0.1"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+              </div>
+              <div id="width_room_primary" class="entrada entradaNumerica">
+                <p class="pregunta">Ancho de los salones (metros)</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="anchoSalon"
+                    class="in cantidad"
+                    min="0.1"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                    step="0.1"
+                  />
+                  <button class="sumar"></button>
                 </div>
+              </div>
 
-                <div id="length_room_primary" class="entrada entradaNumerica">
-                  <p class="pregunta">Largo de los salones (metros)</p>
-                  <div class="respuesta">
-                    <button class="restar"></button>
-                    <input
-                      autocomplete="off"
-                      id="largoSalon"
-                      class="in cantidad"
-                      min="0.1"
-                      name="cantidad"
-                      value="0"
-                      type="number"
-                      step="0.1"
-                    />
-                    <button class="sumar"></button>
-                  </div>
+              <div id="length_room_primary" class="entrada entradaNumerica">
+                <p class="pregunta">Largo de los salones (metros)</p>
+                <div class="respuesta">
+                  <button class="restar"></button>
+                  <input
+                    autocomplete="off"
+                    id="largoSalon"
+                    class="in cantidad"
+                    min="0.1"
+                    name="cantidad"
+                    value="0"
+                    type="number"
+                    step="0.1"
+                  />
+                  <button class="sumar"></button>
                 </div>
               </div>
             </div>
@@ -455,24 +459,27 @@
               de los salones)
             </p>
           </div>
+
+          <div id="resultado">
+            <p>Estado del proceso:</p>
+            <div id="porcentaje">
+              <span id="porcentajeEtiqueta"></span>
+              <div id="porcentajeAvanzado"></div>
+            </div>
+          </div>
         </div>
         <div class="seccionDerecha">
+        <div id="botonAbrirIntro">+</div>
+            <div id="botonEnviarDatos">Iniciar simulación</div>
+          <div class="botonesCambioPagina">
+            <div class="boton botonDeshabilitado" id="botonAnterior"><div class="flecha">&#8592</div>Anterior</div>
+            <div class="boton" id="botonSiguiente">Siguiente <div class="flecha">&#8594</div></div>
+          </div>
           <div id="informacionContextual"></div>
         </div>
       </div>
 
       <!--Salidas-->
-      <section id="salidas">
-        <div id="resultado">
-          <div id="porcentaje">
-            <span id="porcentajeEtiqueta"></span>
-            <div id="porcentajeAvanzado"></div>
-          </div>
-        </div>
-
-        <div id="botonEnviarDatos">Iniciar simulación</div>
-      </section>
-
       <section id="tablero">
         <div id="col1">
           <div id="porcentajeSim">

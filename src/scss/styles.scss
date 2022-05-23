@@ -57,20 +57,56 @@
 }
 
 #intro {
-  padding: 2em 2em 8em 2em;
-  width: 70%;
-  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  display: none;
+  position: fixed;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  margin: 0% auto 1%;
   overflow: auto;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  background-color: #f4f2fd;
+  color: $colorTexto;
+  z-index: 99;
+
+  #texto {
+    padding: 0% 15%;
+  }
+
+  .resaltado {
+    font-weight: bolder;
+  }
+}
+
+#botonCerrarIntro {
+  color: $colorTexto;
+  position: fixed;
+  right: 3.5%;
+  font-size: 1.6em;
+  cursor: pointer;
+  display: block;
+  top: 42px;
+}
+
+.bloqueNivelEducativo {
+  #preescolar {
+    display: block;
+  }
+
+  #primaria {
+    display: none;
+  }
+
+  #secundaria {
+    display: none;
+  }
 }
 
 #entradas {
   display: flex;
-  background-color: #f1f3fccc;
+  background-color: #f4f2fd;
   font-size: 1.2em;
   width: 100vw;
   padding: 2vw 5vh;
@@ -91,19 +127,88 @@
   }
 
   .seccionDerecha {
+    padding: 2% 2% 5% 8%;
     width: 50%;
-    height: fit-content;
-    padding: 2% 5% 5% 2%;
-    margin-top: 10%;
-    background-color: #6364ea;
-    border-radius: 5px;
     color: white;
+
+    #botonAbrirIntro {
+      color: $colorTexto;
+      position: absolute;
+      right: 3.5%;
+      font-size: 1.8em;
+      cursor: pointer;
+      display: block;
+      margin-top: -1em;
+    }
+
+    .botonesCambioPagina {
+      display: flex;
+      color: $colorTexto;
+      justify-content: space-between;
+      position: relative;
+      top: 76%;
+
+      .boton {
+        display: flex;
+        cursor: pointer;
+
+        .flecha {
+          margin: 0px 10px;
+          padding: 3px 3px 3px 5px;
+          border-radius: 3px;
+          width: 27px;
+          height: 27px;
+          background-color: #2660fc;
+          color: white;
+        }
+
+        .flecha:hover {
+          background-color: #2efee4;
+        }
+
+        &.botonDeshabilitado {
+          opacity: 0.2;
+          cursor: default;
+
+          .flecha:hover {
+            background-color: #2660fc;
+          }
+
+        }
+      }
+    }
+
+    #informacionContextual {
+      background-color: #7a59e4;
+      padding: 5% 6% 5% 7%;
+      border-radius: 20px;
+      width: 85%;
+      height: fit-content;
+      position: relative;
+      top: 7%;
+      visibility: hidden;
+    }
+  }
+
+  #botonEnviarDatos {
+    position: relative;
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: #2660fc;
+    width: 30%;
+    text-align: center;
+    margin: 1.3em auto;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+    left: 33%;
+
+    &:hover {
+      background-color: #2efee4;
+    }
   }
 
   .pregunta {
     font-weight: bold;
-    line-height: 0.1em;
-    padding-right: 1em;
   }
 }
 
@@ -298,29 +403,14 @@ input[type='range'] {
   }
 }
 
-#botonEnviarDatos {
-  display: block;
-  padding: 0.5em;
-  cursor: pointer;
-  background-color: #04aa6d;
-  width: 40%;
-  text-align: center;
-  margin: 2em auto;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    background-color: #072b2b;
-  }
-}
-
 #resultado {
-  padding: 2em;
+  padding: 4em 0em;
 
   #porcentaje {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #67b2c4;
+    background-color: #87aaf9;
     position: relative;
   }
 
@@ -351,7 +441,7 @@ input[type='range'] {
 }
 
 #porcentaje {
-  color: #97d8c0;
+  color: #2660fc;
 }
 
 #tablero {

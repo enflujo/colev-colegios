@@ -8,9 +8,21 @@ const ws = new WebSocket('ws://localhost:8000/ws');
 const viz = new Viz();
 const proceso = new Porcentaje();
 const formulario = new Formulario();
+const cuerpo = document.body;
 const tablero = document.getElementById('tablero');
+const botonAbrirIntro = document.getElementById('botonAbrirIntro');
+const botonCerrarIntro = document.getElementById('botonCerrarIntro');
+const intro = document.getElementById('intro');
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const informacionContextual = document.getElementById('informacionContextual');
+const botonAnterior = document.getElementById('botonAnterior');
+const botonSiguiente = document.getElementById('botonSiguiente');
+const seccionPreescolar = document.getElementById('preescolar');
+const seccionPrimaria = document.getElementById('primaria');
+const seccionSecundaria = document.getElementById('secundaria');
+
+let introVisible;
+let seccionActual = 0;
 
 ws.onopen = () => {
   console.log('Conexión exitosa');
@@ -77,6 +89,49 @@ for (let llave in contextos) {
   const campo = document.getElementById(llave);
 
   campo.addEventListener('mouseover', () => {
+    informacionContextual.style.visibility = 'visible';
     informacionContextual.innerText = contextos[llave];
   });
+}
+
+botonAbrirIntro.onclick = () => {
+  intro.style.display = 'flex';
+};
+
+botonCerrarIntro.onclick = () => {
+  intro.style.display = 'none';
+};
+
+botonSiguiente.onclick = () => {
+  if (seccionActual < 2) {
+    seccionActual += 1;
+  }
+  pintarSeccion();
+};
+
+botonAnterior.onclick = () => {
+  if (seccionActual > 0) {
+    seccionActual -= 1;
+  }
+  pintarSeccion();
+};
+
+function pintarSeccion() {
+  if (seccionActual == 0) {
+    seccionPreescolar.style.display = 'block';
+    seccionPrimaria.style.display = 'none';
+    seccionSecundaria.style.display = 'none';
+    botonAnterior.classList.add('botonDeshabilitado');
+  } else if (seccionActual == 1) {
+    seccionPreescolar.style.display = 'none';
+    seccionPrimaria.style.display = 'block';
+    seccionSecundaria.style.display = 'none';
+    botonAnterior.classList.remove('botonDeshabilitado');
+    botonSiguiente.classList.remove('botonDeshabilitado');
+  } else if (seccionActual == 2) {
+    seccionPreescolar.style.display = 'none';
+    seccionPrimaria.style.display = 'none';
+    seccionSecundaria.style.display = 'block';
+    botonSiguiente.classList.add('botonDeshabilitado');
+  }
 }
