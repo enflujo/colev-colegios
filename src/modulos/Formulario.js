@@ -19,6 +19,11 @@ export default class Formulario {
         const input = e.target.parentNode.querySelector('input[type=number]');
         input.stepDown();
         input.dispatchEvent(new Event('change'));
+        if (input.value === '0') {
+          Object.assign(input.style, {
+            backgroundColor: '#e7fbfa',
+          });
+        }
       };
     });
 
@@ -27,6 +32,11 @@ export default class Formulario {
         const input = e.target.parentNode.querySelector('input[type=number]');
         input.stepUp();
         input.dispatchEvent(new Event('change'));
+        if (input.value !== '0') {
+          Object.assign(input.style, {
+            backgroundColor: '#35fee3',
+          });
+        }
       };
     });
 
@@ -40,6 +50,7 @@ export default class Formulario {
 
     this.valores.forEach((entrada) => {
       entrada.onchange = () => {
+        console.log(entrada);
         if (!entrada.dataset.completo) {
           this._actualizarBarraPorcentaje();
           entrada.dataset.completo = true;
@@ -51,7 +62,6 @@ export default class Formulario {
   _actualizarBarraPorcentaje() {
     this.completados++;
     let widthActual = (this.completados / this.valores.length) * 100;
-    console.log(widthActual);
     let widthActualSinDecimales = Math.floor(widthActual);
     this.etiqueta.innerText = widthActualSinDecimales + '%';
     this.porcentajeCirculo.style.strokeDasharray = `${widthActual / 10}, 100`;

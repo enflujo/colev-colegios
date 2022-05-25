@@ -46,6 +46,7 @@
   h2 {
     font-family: $fuenteSubtitulo;
     font-size: 1.9em;
+    font-style: oblique;
   }
 
   .texto {
@@ -126,6 +127,11 @@
   .seccionIzquierda {
     padding: 2% 5% 5% 2%;
     width: 55%;
+
+    #descripcion {
+      font-family: $fuenteSubtitulo;
+      font-size: 1.1em;
+    }
   }
 
   .seccionDerecha {
@@ -148,7 +154,7 @@
       color: $colorTexto;
       justify-content: space-between;
       position: relative;
-      top: 68%;
+      top: 69%;
 
       .boton {
         display: flex;
@@ -262,8 +268,9 @@
 .tituloSeccion {
   letter-spacing: 1.5px;
   border-bottom: 1px dotted;
-  font-weight: normal;
+  font-weight: 800;
   padding-bottom: 0.5em;
+  font-family: $fuenteSubtitulo;
 }
 
 .logo {
@@ -310,7 +317,9 @@ input[type='radio'] {
   }
 
   &:checked {
-    border: 8px solid #35fee3;
+    background: radial-gradient(#23fdae, #12ca87);
+
+
 
     &+label {
       color: $colorTexto;
@@ -344,6 +353,7 @@ input[type='range'] {
   list-style: none;
   display: flex;
   position: relative;
+  background-color: transparent;
 
   li {
     display: flex;
@@ -423,7 +433,7 @@ input[type='range'] {
 
   #porcentajeCirculo {
     position: relative;
-    top: -3%;
+    top: -2vh;
     fill: #87aaf9;
     stroke: #00ffa1db;
     stroke-width: 1;
@@ -434,8 +444,8 @@ input[type='range'] {
     width: fit-content;
     height: fit-content;
     position: relative;
-    top: 23px;
-    left: -235px;
+    top: 3vh;
+    left: -15vw;
   }
 }
 
