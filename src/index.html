@@ -23,34 +23,39 @@
   </head>
   <body>
     <main id="app">
-      <div id="portada">
-        <h1>¡De vuelta al colegio!</h1>
-        <h2>
-          ¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases presenciales?
-        </h2>
-        <p class="texto">Conózcala con esta aplicación</p>
-      </div>
+      <section id="inicio">
+        <div id="portada">
+          <h1>¡De vuelta al colegio!</h1>
+          <h2>
+            ¿Le gustaría saber cuál es la situación epidemiológica de su colegio con el regreso a las clases
+            presenciales?
+          </h2>
+          <p class="texto">Conózcala con esta aplicación</p>
+        </div>
+      </section>
       <section id="intro">
         <div id="botonCerrarIntro">*</div>
         <div id="texto">
-        <p>
-          <span class="resaltado">¡De vuelta al colegio!</span> permite determinar el nivel de riesgo de contagio que enfrentan aquellas personas que
-          hacen parte de los centros e instituciones educativas. Volver a encontrarnos es un deseo, pero al mismo tiempo
-          un riesgo que debe ser mitigado.
-        </p>
-        <p>Con este fin, <span class="resaltado">¡De vuelta al colegio!</span> pretende brindar datos confiables y
-          precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base en
-          las condiciones físicas y sanitarias de cada colegio.</p>
-        <p>
-          Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado por
-          expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que han
-          sido recolectados por instituciones oficiales.
-        </p>
-        <p>
-          Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada a
-          sus propias condiciones.
-        </p>
-      </div>
+          <p>
+            <span class="resaltado">¡De vuelta al colegio!</span> permite determinar el nivel de riesgo de contagio que
+            enfrentan aquellas personas que hacen parte de los centros e instituciones educativas. Volver a encontrarnos
+            es un deseo, pero al mismo tiempo un riesgo que debe ser mitigado.
+          </p>
+          <p>
+            Con este fin, <span class="resaltado">¡De vuelta al colegio!</span> pretende brindar datos confiables y
+            precisos para que estudiantes, padres de familia y directivos, puedan tomar decisiones informadas con base
+            en las condiciones físicas y sanitarias de cada colegio.
+          </p>
+          <p>
+            Los datos que introduce en la plataforma son calculados por un modelo de inteligencia artificial diseñado
+            por expertos y expertas en epidemiología, entrenado a partir de los datos de la evolución del Covid-19 que
+            han sido recolectados por instituciones oficiales.
+          </p>
+          <p>
+            Le invitamos a responder a la mayor cantidad de preguntas para que el modelo arroje una predicción ajustada
+            a sus propias condiciones.
+          </p>
+        </div>
       </section>
 
       <div id="entradas">
@@ -459,29 +464,25 @@
               de los salones)
             </p>
           </div>
-
-          <div id="resultado">
-            <div id="porcentaje">
-              <p id="estadoProceso">Estado del proceso:</p>
-              <svg id="porcentajeCirculo" viewBox="0 0 20 20">
-                <path 
-                  d="M2 1
-                  a 1.59 1.59 0 0 1 0 3.18
-                  a 1.59 1.59 0 0 1 0 -3.18"
-                />
-              </svg>
-              <span id="porcentajeEtiqueta">0%</span>
-            </div>
-          </div>
         </div>
         <div class="seccionDerecha">
-        <div id="botonAbrirIntro">+</div>
-            <div id="botonEnviarDatos">Iniciar simulación</div>
-          <div class="botonesCambioPagina">
-            <div class="boton botonDeshabilitado" id="botonAnterior"><div class="flecha">&#8592</div>Anterior</div>
-            <div class="boton" id="botonSiguiente">Siguiente <div class="flecha">&#8594</div></div>
-          </div>
+          <div id="botonAbrirIntro">+</div>
+          <div id="botonEnviarDatos">Iniciar simulación</div>
           <div id="informacionContextual"></div>
+        </div>
+
+        <div id="resultado">
+          <div id="porcentaje">
+            <p id="estadoProceso">Estado del proceso:</p>
+            <svg id="porcentajeCirculo" viewBox="0 0 20 20">
+              <path
+                d="M2 1
+                a 1.59 1.59 0 0 1 0 3.18
+                a 1.59 1.59 0 0 1 0 -3.18"
+              />
+            </svg>
+            <span id="porcentajeEtiqueta">0%</span>
+          </div>
         </div>
       </div>
 

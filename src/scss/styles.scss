@@ -25,6 +25,14 @@
   @import './pantallas/pantallasGrandes';
 }
 
+#inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
 #portada {
   display: flex;
   justify-content: center;
@@ -92,17 +100,8 @@
 }
 
 .bloqueNivelEducativo {
-  #preescolar {
-    display: block;
-  }
+  display: block;
 
-  #primaria {
-    display: none;
-  }
-
-  #secundaria {
-    display: none;
-  }
 }
 
 #entradas {
@@ -113,7 +112,7 @@
   width: 100vw;
   padding: 2vw 5vh;
   color: #3163fa;
-  margin-top: 25%;
+  margin-top: 100vh;
   border-radius: 5px;
   z-index: 98;
 
@@ -188,12 +187,12 @@
 
     #informacionContextual {
       background-color: #7a59e4;
-      padding: 5% 6% 5% 7%;
+      padding: 1.5%;
       border-radius: 20px;
-      width: 85%;
+      width: 30%;
       height: fit-content;
-      position: relative;
-      top: 30%;
+      position: fixed;
+      top: 40%;
       visibility: hidden;
     }
   }
@@ -417,7 +416,9 @@ input[type='range'] {
 }
 
 #resultado {
-  padding: 3em 0em;
+  position: fixed;
+  top: 75%;
+  left: 69%;
 
   #estadoProceso {
     position: relative;
@@ -427,7 +428,6 @@ input[type='range'] {
 
   #porcentaje {
     display: flex;
-    width: 80%;
     height: fit-content;
     position: relative;
   }

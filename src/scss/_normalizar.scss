@@ -59,23 +59,6 @@ body::before {
   animation-delay: -32s;
 }
 
-body::after {
-  @include dots(20);
-  animation-duration: 63s;
-  animation-delay: -32s;
-}
-
-head::before {
-  @include dots(20);
-  animation-duration: 62s;
-  animation-delay: -32s;
-}
-
-head::after {
-  @include dots(20);
-  animation-duration: 61s;
-  animation-delay: -32s;
-}
 
 
 @keyframes move {
