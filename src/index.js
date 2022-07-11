@@ -10,13 +10,9 @@ const proceso = new Porcentaje();
 const formulario = new Formulario();
 const cuerpo = document.body;
 const tablero = document.getElementById('tablero');
-const botonAbrirIntro = document.getElementById('botonAbrirIntro');
-const botonCerrarIntro = document.getElementById('botonCerrarIntro');
 const intro = document.getElementById('intro');
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const informacionContextual = document.getElementById('informacionContextual');
-const botonAnterior = document.getElementById('botonAnterior');
-const botonSiguiente = document.getElementById('botonSiguiente');
 
 ws.onopen = () => {
   console.log('Conexión exitosa');

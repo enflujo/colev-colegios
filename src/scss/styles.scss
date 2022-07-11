@@ -29,8 +29,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
+  margin-bottom: 10%;
 }
 
 #portada {
@@ -67,21 +68,19 @@
 
 #intro {
   width: 100vw;
-  height: 100vh;
-  top: 0px;
-  display: none;
-  position: fixed;
-  justify-content: center;
-  flex-direction: column;
+  position: relative;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   background-color: #f4f2fd;
   color: $colorTexto;
-  z-index: 99;
+  font-family: $fuenteSubtitulo;
+  z-index: 8;
   overflow: hidden;
+  padding: 3% 0%;
+  margin-top: 80%;
 
   #texto {
-    padding: 0% 15%;
+    padding: 0% 14%;
   }
 
   .resaltado {
@@ -112,9 +111,8 @@
   width: 100vw;
   padding: 2vw 5vh;
   color: #3163fa;
-  margin-top: 100vh;
-  border-radius: 5px;
-  z-index: 98;
+  border-top: 1px solid #6c6eeb;
+  z-index: 7;
 
   .entrada {
     display: flex;
@@ -129,7 +127,7 @@
 
     #descripcion {
       font-family: $fuenteSubtitulo;
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
 
@@ -475,6 +473,8 @@ input[type='range'] {
 
 #tablero {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 9;
