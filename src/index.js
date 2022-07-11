@@ -8,11 +8,10 @@ const ws = new WebSocket('ws://localhost:8000/ws');
 const viz = new Viz();
 const proceso = new Porcentaje();
 const formulario = new Formulario();
-const cuerpo = document.body;
 const tablero = document.getElementById('tablero');
-const intro = document.getElementById('intro');
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const informacionContextual = document.getElementById('informacionContextual');
+const botonCerrarSimulacion = document.getElementById('cerrarSimulacion');
 
 ws.onopen = () => {
   console.log('Conexión exitosa');
@@ -87,3 +86,7 @@ for (let llave in contextos) {
     informacionContextual.style.visibility = 'hidden';
   });
 }
+
+botonCerrarSimulacion.onclick = () => {
+  tablero.style.display = 'none';
+};

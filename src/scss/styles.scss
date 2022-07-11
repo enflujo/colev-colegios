@@ -481,6 +481,13 @@ input[type='range'] {
   background-color: #2a363bf8;
   display: none;
 
+  #cerrarSimulacion {
+    position: absolute;
+    cursor: pointer;
+    right: 2%;
+    top: 2%;
+  }
+
   .persona {
     width: $radio;
     position: absolute;
