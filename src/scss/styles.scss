@@ -134,6 +134,7 @@
   }
 
   .seccionDerecha {
+    position: relative;
     padding: 2% 2% 5% 8%;
     width: 50%;
     color: white;
@@ -188,10 +189,11 @@
     #informacionContextual {
       background-color: #7a59e4;
       padding: 1.5%;
+      margin: 30% 5%;
       border-radius: 20px;
-      width: 30%;
+      width: 75%;
       height: fit-content;
-      position: fixed;
+      position: sticky;
       top: 40%;
       visibility: hidden;
     }
@@ -416,13 +418,15 @@ input[type='range'] {
 }
 
 #resultado {
-  position: fixed;
-  top: 75%;
-  left: 69%;
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 25%;
+  color: $colorTexto;
 
   #estadoProceso {
     position: relative;
-    width: 55%;
+    width: 100%;
     height: fit-content;
   }
 
@@ -432,9 +436,14 @@ input[type='range'] {
     position: relative;
   }
 
+  #contenedorCirculo {
+    position: relative;
+  }
+
   #porcentajeCirculo {
     position: relative;
-    top: -2vh;
+    top: -2%;
+    left: 4%;
     fill: #87aaf9;
     stroke: #00ffa1db;
     stroke-width: 1;
@@ -443,10 +452,9 @@ input[type='range'] {
 
   #porcentajeEtiqueta {
     width: fit-content;
-    height: fit-content;
-    position: relative;
-    top: 3vh;
-    left: -15vw;
+    position: absolute;
+    top: 7%;
+    left: 55%;
   }
 }
 
