@@ -11,6 +11,19 @@ const formulario = new Formulario();
 const tablero = document.getElementById('tablero');
 const botonEnviarDatos = document.getElementById('botonEnviarDatos');
 const informacionContextual = document.getElementById('informacionContextual');
+const botonCerrarSimulacion = document.getElementById('cerrarSimulacion');
+const resultado = document.getElementById('resultado');
+const intro = document.getElementById('intro');
+
+window.addEventListener('scroll', () => {
+  const introTecho = intro.offsetTop;
+  const techo = (window.pageYOffset || intro.scrollTop) - (intro.clientTop || 0);
+  if (techo >= introTecho) {
+    resultado.style.display = 'flex';
+  } else {
+    resultado.style.display = 'none';
+  }
+});
 
 ws.onopen = () => {
   console.log('Conexión exitosa');
@@ -77,6 +90,15 @@ for (let llave in contextos) {
   const campo = document.getElementById(llave);
 
   campo.addEventListener('mouseover', () => {
+    informacionContextual.style.visibility = 'visible';
     informacionContextual.innerText = contextos[llave];
   });
+
+  campo.addEventListener('mouseleave', () => {
+    informacionContextual.style.visibility = 'hidden';
+  });
 }
+
+botonCerrarSimulacion.onclick = () => {
+  tablero.style.display = 'none';
+};
