@@ -6,7 +6,7 @@ export default class Formulario {
     this.entradas = document.querySelectorAll('.entrada');
     this.botonesRapidos = document.querySelectorAll('.br');
     this.porcentajeAvanzado = document.getElementById('porcentajeAvanzado');
-    this.porcentajeCirculo = document.getElementById('porcentajeCirculo');
+    this.porcentajeCirculo = document.getElementById('porcentajeCirculoLinea');
     this.etiqueta = document.getElementById('porcentajeEtiqueta');
     this.completados = 0;
 
@@ -63,7 +63,7 @@ export default class Formulario {
     this.completados++;
     let widthActual = (this.completados / this.valores.length) * 100;
     let widthActualSinDecimales = Math.floor(widthActual);
-    this.etiqueta.innerText = widthActualSinDecimales + '%';
-    this.porcentajeCirculo.style.strokeDasharray = `${widthActual / 10}, 100`;
+    this.etiqueta.textContent = widthActualSinDecimales + '%';
+    this.porcentajeCirculo.style.strokeDasharray = `${widthActualSinDecimales}, 100`;
   }
 }
