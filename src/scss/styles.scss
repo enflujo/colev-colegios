@@ -1,6 +1,7 @@
 @import './constantes';
 @import './mixins';
 @import './normalizar';
+@import './textoCircular';
 
 // Estilos generales y pantallas muy pequeñas de celular
 @import './pantallas/base';
@@ -574,21 +575,70 @@ input[type='range'] {
       background-color: $colorOtros;
     }
   }
+  
+  .textoAnillo {
+    font-size: 0.8em;
+    position: absolute;
+    float: left;
+
+    &.suceptibles {
+      @include rotated-text(11, 40deg, -15deg, $radio-suc);  
+      span{
+        position: absolute;
+        height: $radio-suc * 2;
+        width: $radio-suc * 2;
+      }
+    }
+  
+    &.expuestos {
+      @include rotated-text(9, 40deg, -15deg, $radio-exp);
+      span{
+        position: absolute;
+        height: $radio-exp * 2;
+        width: $radio-exp * 2;
+      }
+    }
+
+    &.infectado {
+      color: #2a363bf8;
+      font-weight: bold;
+    }
+    
+    &.recuperado {
+      @include rotated-text(10, 40deg, -15deg, $radio-rec);
+      span{
+        position: absolute;
+        height: $radio-rec * 2;
+        width: $radio-rec * 2;
+      }
+    }
+  }
+
+  #lineasDeTiempo {
+    p {
+      position: absolute;
+      float: left;
+      margin-left: 2em;
+    }
+  }
 }
 
 #col1 {
   text-align: center;
+  width: 50%;
 }
 
 #col2 {
-  width: 100%;
+  width: 45%;
 }
 
 #probabilidad {
+  position: relative;
+  left: -33%;
   width: 30vw;
   border: 1px dotted;
   padding: 0.5em 0.5em 1.5em;
-  margin: 0.5em;
+  margin-top:  0.5em;
   font-size: 0.9em;
 
   #contagio {
@@ -605,11 +655,16 @@ input[type='range'] {
 
 #poblaciones {
   display: flex;
+  position: relative;
+  // left: -5em;
   justify-content: space-around;
   transition: all 0.35s ease-in-out;
+  margin-top: 1em;
 
   .poblacion {
     text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
 
     .nombre {
       &::before {
@@ -627,6 +682,7 @@ input[type='range'] {
     margin: 0.2em;
     font-size: 0.8em;
   }
+
 
   #preschool {
     .nombre {
@@ -671,6 +727,30 @@ input[type='range'] {
   }
 }
 
+#botonesModosVisualizacion {
+  display: flex;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 3px;
+  
+  .botonModo{
+    border-style: solid;
+    border-width: 1px;
+    width: 15em;
+    // text-align: center;
+    margin: auto;
+    
+    &:hover {
+      background-color: #464646;
+    }
+  }
+  
+  p {
+    margin: 0 0 0 0;
+  }
+}
+
 #lineasDeTiempo {
-  margin: 30px 0;
+  position:relative;
+  margin: 0 0 0 0;//30px 0;
 }

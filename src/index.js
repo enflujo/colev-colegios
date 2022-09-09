@@ -14,6 +14,8 @@ const informacionContextual = document.getElementById('informacionContextual');
 const botonCerrarSimulacion = document.getElementById('cerrarSimulacion');
 const resultado = document.getElementById('resultado');
 const intro = document.getElementById('intro');
+const botonProbabilidad = document.getElementById('probabilidadContagio');
+const botonEstado = document.getElementById('estadoActual');
 
 window.addEventListener('scroll', () => {
   const introTecho = intro.offsetTop;
@@ -101,4 +103,16 @@ for (let llave in contextos) {
 
 botonCerrarSimulacion.onclick = () => {
   tablero.style.display = 'none';
+};
+
+botonProbabilidad.onclick = () => {
+  if (viz.linea.modo == 1){
+    viz.linea.establecerModo(0);
+  }
+};
+
+botonEstado.onclick = () => {
+  if (viz.linea.modo == 0){
+    viz.linea.establecerModo(1);
+  }
 };
