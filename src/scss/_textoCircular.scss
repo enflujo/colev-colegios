@@ -1,0 +1,14 @@
+// https://codepen.io/razroo-chief/pen/ZbbgYR
+
+$radio-suc: 200px;
+$radio-exp: 160px;
+$radio-rec: 240px;
+
+@mixin rotated-text($num-letters: 14, $angle-span: 180deg, $angle-offset: 0deg, $radio: 75px) {
+    $angle-per-char: $angle-span / $num-letters;
+      @for $i from 0 through $num-letters {
+        .char#{$i} {
+          transform: rotate($angle-offset + $angle-per-char * $i);// translateX($radio / 2); //translateX(0.8em / 2);
+        }
+      }
+}
