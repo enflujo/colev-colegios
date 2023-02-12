@@ -101,7 +101,6 @@
 
 .bloqueNivelEducativo {
   display: block;
-
 }
 
 #entradas {
@@ -180,7 +179,6 @@
           .flecha:hover {
             background-color: #2660fc;
           }
-
         }
       }
     }
@@ -309,7 +307,7 @@ input[type='radio'] {
   top: 4px;
   cursor: pointer;
 
-  &+label {
+  & + label {
     color: $colorTexto;
     font-size: 0.8em;
     padding: 0.3em;
@@ -320,9 +318,7 @@ input[type='radio'] {
     background: radial-gradient(#23fdae, #12ca87);
     border: 0px;
 
-
-
-    &+label {
+    & + label {
       color: $colorTexto;
       background-color: transparent;
     }
@@ -383,7 +379,6 @@ input[type='range'] {
 
 .entradaNumerica {
   color: $colorTexto;
-
 
   button {
     outline: none;
@@ -575,24 +570,24 @@ input[type='range'] {
       background-color: $colorOtros;
     }
   }
-  
+
   .textoAnillo {
     font-size: 0.8em;
     position: absolute;
     float: left;
 
     &.suceptibles {
-      @include rotated-text(11, 40deg, -15deg, $radio-suc);  
-      span{
+      @include rotated-text(11, 40deg, -15deg, $radio-suc);
+      span {
         position: absolute;
         height: $radio-suc * 2;
         width: $radio-suc * 2;
       }
     }
-  
+
     &.expuestos {
       @include rotated-text(9, 40deg, -15deg, $radio-exp);
-      span{
+      span {
         position: absolute;
         height: $radio-exp * 2;
         width: $radio-exp * 2;
@@ -603,10 +598,10 @@ input[type='range'] {
       color: #2a363bf8;
       font-weight: bold;
     }
-    
+
     &.recuperado {
       @include rotated-text(10, 40deg, -15deg, $radio-rec);
-      span{
+      span {
         position: absolute;
         height: $radio-rec * 2;
         width: $radio-rec * 2;
@@ -638,7 +633,7 @@ input[type='range'] {
   width: 30vw;
   border: 1px dotted;
   padding: 0.5em 0.5em 1.5em;
-  margin-top:  0.5em;
+  margin-top: 0.5em;
   font-size: 0.9em;
 
   #contagio {
@@ -682,7 +677,6 @@ input[type='range'] {
     margin: 0.2em;
     font-size: 0.8em;
   }
-
 
   #preschool {
     .nombre {
@@ -732,25 +726,25 @@ input[type='range'] {
   text-align: center;
   margin-top: 2em;
   margin-bottom: 3px;
-  
-  .botonModo{
+
+  .botonModo {
     border-style: solid;
     border-width: 1px;
     width: 15em;
     // text-align: center;
     margin: auto;
-    
+
     &:hover {
       background-color: #464646;
     }
   }
-  
+
   p {
     margin: 0 0 0 0;
   }
 }
 
 #lineasDeTiempo {
-  position:relative;
-  margin: 0 0 0 0;//30px 0;
+  position: relative;
+  margin: 0 0 0 0; //30px 0;
 }

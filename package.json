@@ -1,5 +1,5 @@
 {
-  "name": "regreso-colegios",
+  "name": "de-vuelta-al-colegio",
   "version": "1.0.0",
   "main": "src/index.js",
   "author": "Juan Camilo González <j.gonzalezj@uniandes.edu.co> (https://juancgonzalez.com)",
@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.dev.js"
+    "start": "webpack serve --config webpack.dev.js",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write --list-different ."
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -26,6 +28,7 @@
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.1",
+    "prettier": "^2.8.4",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

@@ -19,7 +19,7 @@ export default class {
       '#EC2049', // severo
       '#EC2049', // crítico
       '#EC2049', // fallecido
-      '#74BA72'// '#99B898', // recuperado
+      '#74BA72', // '#99B898', // recuperado
     ];
 
     this.colorsPoblaciones = [
@@ -38,7 +38,7 @@ export default class {
       this.contagiados.push(0);
     }
 
-    this.linea = new LineaTiempo(this.poblaciones, this.colorsPoblaciones,);
+    this.linea = new LineaTiempo(this.poblaciones, this.colorsPoblaciones);
     this.pintarAnillos();
   }
 
@@ -68,15 +68,14 @@ export default class {
         anillo.setAttribute('fill', 'transparent');
       }
       svg.appendChild(anillo);
-
     });
 
     this.contenedor.appendChild(svg);
-    
+
     // Texto Anillo
 
     let texto = document.createElement('span');
-    texto.innerHTML = "infectado";
+    texto.innerHTML = 'infectado';
     texto.className = 'textoAnillo infectado';
     Object.assign(texto.style, {
       top: `${margenTodos - 6}px`,
@@ -89,11 +88,11 @@ export default class {
     indicesAnillos.forEach((indice, i) => {
       let texto = document.createElement('div');
       texto.className = 'textoAnillo ' + estados[indice];
-        
+
       Object.assign(texto.style, {
         top: `${margenTodos - this.radios[indice] + 5}px`,
         left: `${margenTodos - this.radios[indice]}px`,
-        color: `${this.coloresEstado[indice]}`
+        color: `${this.coloresEstado[indice]}`,
       });
 
       estados[indice].split('').forEach((ch, i) => {
@@ -104,8 +103,7 @@ export default class {
       });
 
       this.contenedor.appendChild(texto);
-    })
-
+    });
   }
 
   sumarEstado(mensaje) {
@@ -120,7 +118,7 @@ export default class {
 
     this.poblaciones.forEach((nombre) => {
       estadoActual[nombre] = [0, 0];
-    })
+    });
 
     datos.forEach((estado, i) => {
       if (estado === 2) {
@@ -155,7 +153,7 @@ export default class {
           }
         }
       }
-      
+
       if (estado === 6) {
         for (let nombre of this.poblaciones) {
           const nodo = this.nodos[nombre][0];
@@ -185,15 +183,13 @@ export default class {
       const contenedor = document.getElementById(nombre);
       const conteo = contenedor.querySelector('.contador');
       // conteo.innerText = `${((suma / 200) * 100).toFixed(1)}%`;
-      conteo.innerText = `${suma}/${this.contagiadosPoblaciones[nombre].length} - ${((suma / this.contagiadosPoblaciones[nombre].length) * 100).toFixed(1)}%`;
-
+      conteo.innerText = `${suma}/${this.contagiadosPoblaciones[nombre].length} - ${(
+        (suma / this.contagiadosPoblaciones[nombre].length) *
+        100
+      ).toFixed(1)}%`;
     });
 
-    this.linea.actualizar(conteoPoblaciones,
-           estadoActual,
-           this.poblaciones,
-           mensaje.stateI,
-           mensaje.trialI);
+    this.linea.actualizar(conteoPoblaciones, estadoActual, this.poblaciones, mensaje.stateI, mensaje.trialI);
   }
 
   pintarNodos(nodos) {

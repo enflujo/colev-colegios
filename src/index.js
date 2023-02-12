@@ -106,13 +106,13 @@ botonCerrarSimulacion.onclick = () => {
 };
 
 botonProbabilidad.onclick = () => {
-  if (viz.linea.modo == 1){
+  if (viz.linea.modo == 1) {
     viz.linea.establecerModo(0);
   }
 };
 
 botonEstado.onclick = () => {
-  if (viz.linea.modo == 0){
+  if (viz.linea.modo == 0) {
     viz.linea.establecerModo(1);
   }
 };

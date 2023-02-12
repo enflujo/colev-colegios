@@ -100,7 +100,6 @@
 
 .bloqueNivelEducativo {
   display: block;
-
 }
 
 #entradas {
@@ -179,7 +178,6 @@
           .flecha:hover {
             background-color: #2660fc;
           }
-
         }
       }
     }
@@ -308,7 +306,7 @@ input[type='radio'] {
   top: 4px;
   cursor: pointer;
 
-  &+label {
+  & + label {
     color: $colorTexto;
     font-size: 0.8em;
     padding: 0.3em;
@@ -319,9 +317,7 @@ input[type='radio'] {
     background: radial-gradient(#23fdae, #12ca87);
     border: 0px;
 
-
-
-    &+label {
+    & + label {
       color: $colorTexto;
       background-color: transparent;
     }
@@ -382,7 +378,6 @@ input[type='range'] {
 
 .entradaNumerica {
   color: $colorTexto;
-
 
   button {
     outline: none;

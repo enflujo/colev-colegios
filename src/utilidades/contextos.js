@@ -42,5 +42,5 @@ export default {
   ventilation_level:
     'La ventilación es un factor importante para calcular la cantidad de partículas que pueden concentrase en un espacio cerrado durante un tiempo determinado.',
   class_duration:
-    'La cantidad de horas que estudiantes y cuerpo docente comparte en un espacio cerrado, nos ayuda a entender la duración de la exposición.'
+    'La cantidad de horas que estudiantes y cuerpo docente comparte en un espacio cerrado, nos ayuda a entender la duración de la exposición.',
 };
