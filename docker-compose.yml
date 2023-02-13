@@ -6,4 +6,4 @@ services:
     image: enflujo/colegios-api:latest
     restart: unless-stopped
     ports:
-      - 4007:80
+      - 8000:80
